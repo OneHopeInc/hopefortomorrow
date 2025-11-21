@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Discipleship Tips</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.card-section {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+			}
+			
+			.card-section.fade-in-visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: url('/assets/dots.png');
+				background-size: cover;
+				background-position: center;
+				opacity: 0.1;
+				z-index: 0;
+			}
+			
+			.quote-pin-container::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: url('/assets/dots.png');
+				background-size: cover;
+				background-position: center;
+				opacity: 0.1;
+				z-index: 0;
+			}
+		</style>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<!-- Navigation Bar will be rendered here -->
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<!-- Main Content Area -->
+		<main style="padding-top: 0;">
+			<!-- Banner Section -->
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<!-- Background Image -->
+				<div class="absolute inset-0 z-0">
+					<img
+						src="/assets/bgimage6.webp"
+						alt="Background"
+						class="object-cover w-full h-full"
+					/>
+				</div>
+				
+				<!-- Title and Subtitle Overlay -->
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">
+						HOPE FOR TOMORROW
+					</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">
+						DISCIPLESHIP TIPS
+					</h1>
+				</div>
+			</section>
+
+            <!-- Quote Section -->
+			<section id="quote-section" class="relative">
+				<div class="quote-pin-container h-[50vh] flex items-center justify-center px-4 md:px-12 relative overflow-hidden">
+					<div class="max-w-[1200px] mx-auto w-full relative z-10">
+						<div class="text-left">
+							<p id="quote-text-4" class="text-base md:text-xl lg:text-2xl text-white leading-relaxed break-words">
+								Jesus was the master disciple-maker. As you lead this program, we encourage you to follow the example of Jesus as you walk alongside students on their discipleship journey.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Content Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<!-- Jesus Built Relationships Card -->
+					<div class="card-section bg-white/5 p-6 rounded-xl flex flex-col gap-4 mt-6">
+						<h2 class="text-3xl font-bold text-yellow-200">Jesus Built Relationships with His Disciples</h2>
+						<p class="text-lg text-white/90 leading-relaxed">
+							Jesus spent time with his disciples. He loved them and considered them as his dear friends. The disciples also had relationships with one another. These relationships were key to helping them grow as disciples. In this program, focus on building relationships with your students through which you can love them with the love of Jesus. Here are a few ways you can begin to do this:
+						</p>
+						<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+							<li>Learn their names and get to know them personally. This shows them that you care and see them as unique individuals.</li>
+							<li>Actively listen to your students to understand their feelings and perspectives. Taking the time to thoughtfully answer their questions demonstrates that what they say genuinely matters to you!</li>
+							<li>Create opportunities for students to share their thoughts and ideas with each other, such as during small group discussions or in pairs.</li>
+						</ul>
+					</div>
+
+					<!-- Jesus Taught His Disciples Card -->
+					<div class="card-section bg-white/5 p-6 rounded-xl flex flex-col gap-4 mt-6">
+						<h2 class="text-3xl font-bold text-green-200">Jesus Taught His Disciples</h2>
+						<p class="text-lg text-white/90 leading-relaxed">
+							Jesus taught his disciples God's truth through stories, preaching, and practical demonstrations. He communicated who God is and how he wanted the disciples to live as members of his family.
+						</p>
+						<p class="text-lg text-white/90 leading-relaxed">
+							In this program, you will have the opportunity to share life-changing truths from God's Word with your students each week. These truths might challenge cultural norms and feel new to the young people in your classroom. As you guide them, rely on the Holy Spirit for wisdom and guidance. Share God's truth with both conviction and compassion. Keep Jesus at the heart of your teaching, always remembering that the purpose of discipleship is to nurture a growing relationship with Christ rather than to focus on behavior modification.
+						</p>
+					</div>
+
+					<!-- Jesus Modeled Faith Card -->
+					<div class="card-section bg-white/5 p-6 rounded-xl flex flex-col gap-4 mt-6">
+						<h2 class="text-3xl font-bold text-blue-200">Jesus Modeled Faith for His Disciples</h2>
+						<p class="text-lg text-white/90 leading-relaxed">
+							Jesus taught his disciples through what he preached and how he lived. He modeled for them how to pray, trust God, forgive, love others, and honor God above everything else.
+						</p>
+						<p class="text-lg text-white/90 leading-relaxed">
+							In the same way, your example of faith, passion for Jesus, and Christ-like character play an important role as you disciple teens. You can model faith by living out what you teach and displaying Christ-like character in the classroom. You can share about your life and faith journey with your students, helping them see how faith can be integrated into everyday life. This includes sharing faith struggles. It is also important to regularly spend time with the Lord and cultivate your relationship with him – your discipleship matters as you disciple others.
+						</p>
+					</div>
+
+					<!-- Jesus Gave Space Card -->
+					<div class="card-section bg-white/5 p-6 rounded-xl flex flex-col gap-4 mt-6">
+						<h2 class="text-3xl font-bold text-yellow-200">Jesus Gave Space for the Disciples to Learn, Question, and Fail</h2>
+						<p class="text-lg text-white/90 leading-relaxed">
+							The disciples often lacked faith and struggled to understand Jesus, yet he still loved them. He was patient with them as he corrected their false assumptions and continued to invite them into his mission, even when they got things wrong.
+						</p>
+						<p class="text-lg text-white/90 leading-relaxed">
+							We can extend this same grace and patience to our students as they wrestle with hard questions and consider what it means to follow Jesus. A vital part of this is creating a safe and supportive environment where students feel comfortable asking questions and sharing their thoughts. You can build trust by listening carefully and showing that their questions matter. Before sharing your insights, why not encourage other students to express their ideas, too? This helps spark lively discussions and fosters a sense of community. When it is your turn to respond, do so with truth and kindness rather than judgment. No matter where students are in their journey—whether filled with faith or doubt—continue to invite them to explore Jesus and discover what it means to follow him.
+						</p>
+					</div>
+
+					<!-- Jesus Prayed Card -->
+					<div class="card-section bg-white/5 p-6 rounded-xl flex flex-col gap-4 mt-6">
+						<h2 class="text-3xl font-bold text-green-200">Jesus Prayed for His Disciples</h2>
+						<p class="text-lg text-white/90 leading-relaxed">
+							Jesus prayed for his disciples. He prayed that Peter's faith would not fail. He asked his Father to protect them from the evil one and to make them holy through his truth.
+						</p>
+						<p class="text-lg text-white/90 leading-relaxed">
+							We can follow Jesus' example and pray for our students. This is one of the most important things you can do for them. Take time to bring their individual and family needs before God. Pray for their faith and growing relationship with Jesus. Ask God to ground them in his Word and his deep love for them. Pray that the Holy Spirit will work powerfully in their lives, shaping them into devoted followers of Christ.
+						</p>
+					</div>
+
+					<!-- Closing Card -->
+					<div class="card-section bg-white/5 p-6 rounded-xl flex flex-col gap-4 mt-6">
+						<p class="text-lg text-white/90 leading-relaxed">
+							As we follow Jesus' example, we want to remember that discipleship is not a program. It is a relationship with Jesus. We will not be able to teach young people everything we might want them to know in twelve weeks. However, we can serve as guides and mentors on their faith journey, pointing them to Jesus and the hope found in His Word.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+	</body>
+</html>

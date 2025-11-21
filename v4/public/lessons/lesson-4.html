@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Lesson 4: Being, Not Performing</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: var(--dots-bg-image, url('/assets/dots.png'));
+				background-size: cover;
+				background-position: center;
+				opacity: var(--dots-opacity, 0.1);
+				z-index: 0;
+			}
+			
+			.dots-section.flip-dots::before {
+				transform: scaleX(-1);
+			}
+			
+			.dots-section.flip-dots-vertical::before {
+				transform: scaleY(-1);
+			}
+			
+			.dots-section.flip-dots-both::before {
+				transform: scaleX(-1) scaleY(-1);
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const dotsSections = document.querySelectorAll('.dots-section');
+				dotsSections.forEach(section => {
+					const imagePath = section.getAttribute('data-dots-image');
+					if (imagePath) {
+						section.style.setProperty('--dots-bg-image', `url('${imagePath}')`);
+					}
+					
+					const opacity = section.getAttribute('data-dots-opacity');
+					if (opacity !== null) {
+						section.style.setProperty('--dots-opacity', opacity);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<main style="padding-top: 0;">
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<div class="absolute inset-0 z-0">
+					<img src="/assets/bgimage6.webp" alt="Background" class="object-cover w-full h-full" />
+				</div>
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">LESSON 4</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">BEING, NOT PERFORMING</h1>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Teacher Preparation + Resources</h3>
+						<p class="text-white/90 leading-relaxed">
+							This lesson invites students to slow down and rest in Jesus' presence. Before class, find a quiet moment to pray through Luke 10:38-42 and ask the Holy Spirit to lead both your heart and the hearts of your students toward stillness with Jesus.
+						</p>
+					</div>
+
+					<div class="flex flex-col md:flex-row gap-6 mb-6">
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/6798fd10225d955ac6b574af_Lesson%204_Slides.pdf" target="_blank" rel="noopener noreferrer" class="bg-yellow-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Presentation</h3>
+								<p class="text-white/70 text-sm">Download Presentation</p>
+							</div>
+							<img src="/assets/presentation.svg" alt="Presentation" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/6798fd10478c62012e8822d9_Lesson%204_Student.pdf" target="_blank" rel="noopener noreferrer" class="bg-green-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Student Guide</h3>
+								<p class="text-white/70 text-sm">Download Student Guide</p>
+							</div>
+							<img src="/assets/file-text.svg" alt="Student Guide" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://www.hopegallery.org/share/A64FFD2C-4D59-4407-9A46AD70FEA4106A/" target="_blank" rel="noopener noreferrer" class="bg-blue-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-blue-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Download All</h3>
+								<p class="text-white/70 text-sm">Download All Lesson Files</p>
+							</div>
+							<img src="/assets/folder-down.svg" alt="Download All" class="w-8 h-8 text-yellow-200 flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Summary</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								This lesson concludes Unit One's invitation to discipleship by highlighting that following Jesus is about being with him more than doing things for him. Students will explore the story of Mary and Martha, identify their own distractions, and practice praying Scripture so they can sit with Jesus and listen for the Holy Spirit's voice.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Main Point</h3>
+							<p class="text-lg text-white font-regular leading-relaxed">
+								Discipleship is not about outward efforts or performance but about being with Jesus and listening to him.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Objectives</h3>
+							<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+								<li>Students will recognize that the focus of discipleship is their relationship with Jesus, not the things they do for him.</li>
+								<li>Students will practice listening to Jesus by praying Scripture.</li>
+							</ul>
+						</div>
+
+						<div>
+							<h3 class="text-2xl font-bold text-white mb-4">Teaching Tips</h3>
+							<div class="space-y-3 text-lg text-white/90 leading-relaxed">
+								<p>As a leader, you set the tone for the classroom. Students can sense your stress or your calm. Lead by example by taking a few moments before class to pause, pray, and focus on Jesus.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Materials Needed</h3>
+						<div class="flex flex-col md:flex-row gap-6">
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Phone, clock, or timer</h4>
+								<img src="/assets/clock-2.svg" alt="Timer" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Extra papers & pens</h4>
+								<img src="/assets/file-text.svg" alt="Paper" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Two balls</h4>
+								<img src="/assets/activity.svg" alt="Balls" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Two textbooks</h4>
+								<img src="/assets/book.svg" alt="Books" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Getting Started
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 2</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Welcome Activity</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p class="text-white/60 italic">This game requires two student volunteers, two balls, and two textbooks. If you have more materials, invite additional students to play. Call volunteers to the front and give each a ball and a textbook.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Today, we will play a game called Be Still. Our volunteers (say their names) will try to balance their ball on their book. The catch is that while one gets to stand still, the other must follow a series of commands without dropping the ball.</p>
+								<p class="text-white/60 italic">Choose which volunteer will stay still and which will follow the commands. Give a few commands (marching in place, turning in circles, squats, standing on one leg, etc.), inviting suggestions from the class. After a few rounds, ask students to return to their seats.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 3</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Introduction</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Now, let us talk about what happened. You all probably knew from the start how this would play out. [Insert the volunteer's name] was bound to drop the ball because they were doing too much. They were performing a balancing act.</p>
+								<p>Part of maturing is learning to find balance in our lives so we do not drop the things that are most important. But life has a way of getting busy, and finding balance is easier said than done.</p>
+								<p><strong>Icebreaker Question</strong></p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>Think about your own life. What are the things that keep you busy and take up your time? Where in your life do you see yourself "dropping the ball" most often?</p>
+								<p class="text-white/60 italic">Write students' answers on the board so they can refer to them later. Answers may include school, work, sports, social life, family responsibilities, social media, hobbies, etc.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Digging In
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">30 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 4</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed">
+								It is our natural tendency to live busy and distracted lives. We are so conditioned to seek value in the things we do that we lose sight of who God calls us to be. Today, we will read a story that reveals the most important thing Jesus wants from his disciples.
+							</p>
+						</div>
+					</div>
+
+					<div id="luke-10-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 7</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">Why was Martha upset?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What is the "one thing" Mary does that Jesus says is "worth being concerned about"?</p>
+								<p class="text-lg text-white/60 italic">Answer should include sitting in Jesus' presence and listening to him.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slides 8–9</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">Where did Martha go wrong in her attempt to follow Jesus well?</p>
+								<p class="text-lg text-white/60 italic">Call on a few volunteers to share. Point out that Martha became so distracted by doing things for Jesus that she missed the opportunity to be with him.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong>Optional Follow-Up Question</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What are some common ways you have seen yourself or other followers of Jesus make the same mistake Martha made?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">How can you sit in Jesus' presence and listen to his words when he is not physically seated in the room with you like he was for Mary and Martha?</p>
+								<p class="text-lg text-white/60 italic">Answers may include praying, reading the Bible, encountering him in other believers, and growing in relationship with the Holy Spirit.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 9</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed">
+								Jesus does not just call us to follow him and leave us to figure it out on our own. He gives us the Holy Spirit to live inside us. Through the Spirit, Jesus makes his home in our hearts so we can always be in his presence. Before Jesus was crucified, he explained that it was good for him to leave because he would send the Holy Spirit to his disciples. Let us read what he said.
+							</p>
+						</div>
+					</div>
+
+					<div id="john-14-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slides 11–12</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Discussion: The Holy Spirit</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">According to this passage, what does the Holy Spirit do for us?</p>
+								<p class="text-lg text-white/60 italic">Answers may include advocating for us, being with us, leading us into truth, and making God's home with us.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What does it mean that the Holy Spirit is our "Advocate"?</p>
+								<p class="text-lg text-white/60 italic">Explain that "advocate" translates the Greek word "paraclete," meaning "one who is called alongside" as helper, comforter, and teacher.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 13</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Apply</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/60 italic leading-relaxed">
+									Have students form pairs or small groups to discuss:
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">Martha made a common mistake, but notice how kind Jesus was to correct her. He does not want us living overwhelmed, distracted lives. Instead, he invites us to rest in a relationship with him.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">How can you make more space in your life for your relationship with Jesus?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">The distractions around us are loud. What are some ways you can practice quieting the noise regularly so you can hear the Holy Spirit's voice more clearly?</p>
+								<p class="text-lg text-white/60 italic">Bring students' attention back to the whole group.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Practicing Life with Jesus
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slides 14–15</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>For the past few weeks, we have been practicing prayer as a key way of growing in our relationship with Jesus. Sometimes it is hard to recognize his voice with all the competing noise. One practice that can help us hear him better is praying Scripture.</p>
+								<p class="text-white/60 italic">The Bible is not just God's Word to us—it is also something we can speak back to God. When we pray Scripture, it sinks deep, shaping our hearts and minds and training us to recognize the Holy Spirit's voice. Read through the following passage with your students, then model a personal prayer based on it, using "I" and "me" language.</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="ephesians-2-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 16</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Model Prayer</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								Thank you, God, for saving me by your grace. I know I cannot take credit for it–I did not earn your love, and I do not have to. You give it to me freely. Keep me from the danger of relying on my own efforts. I believe you when you say that I am your work of art. You have made me a new person through your Son, Jesus, freeing me from my sins and filling my life with purpose. Help me to do the good things you have planned for me. My life is yours. Amen.
+							</p>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 17</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Response</h3>
+							<p class="text-lg text-white/60 italic leading-relaxed">
+								Transition into an individual response time. Have students continue keeping a journal. Invite them to write their own prayer based on Scripture, making it personal with reflections, requests, and thanksgiving.
+							</p>
+							<div class="mt-4">
+								<h4 class="text-xl font-bold text-white mb-3">Journal Prompt</h4>
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Now it is your turn. Write a prayer to God based on this passage from Titus. Make it personal by putting it in your own words and adding reflections, requests, and moments of thanksgiving.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="titus-3-container"></div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Closing</h3>
+						<p class="text-lg text-white/60 italic leading-relaxed">
+							Encourage students to continue practicing praying Scripture throughout the next week. Wrap up the class by praying over your students and asking the Holy Spirit to help them rest in Jesus' presence.
+						</p>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden"></section>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<a href="/curriculum.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Explore All Lessons</h3>
+								<p class="text-white/70 text-sm">View all 12 lessons</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Explore" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="/lessons/lesson-5.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Next Lesson</h3>
+								<p class="text-white/70 text-sm">Continue to Lesson 5</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Next" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+		<script type="module">
+			import { initLessonScriptureCard } from '/js/init-scripture-card.js';
+
+			document.addEventListener('DOMContentLoaded', () => {
+				initLessonScriptureCard({
+					lessonId: 'lesson-4-luke',
+					containerId: 'luke-10-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+
+				initLessonScriptureCard({
+					lessonId: 'lesson-4-john',
+					containerId: 'john-14-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+
+				initLessonScriptureCard({
+					lessonId: 'lesson-4-ephesians',
+					containerId: 'ephesians-2-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+
+				initLessonScriptureCard({
+					lessonId: 'lesson-4-titus',
+					containerId: 'titus-3-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
+

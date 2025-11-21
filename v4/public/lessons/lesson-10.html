@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Lesson 10: Called to One Kingdom</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: var(--dots-bg-image, url('/assets/dots.png'));
+				background-size: cover;
+				background-position: center;
+				opacity: var(--dots-opacity, 0.1);
+				z-index: 0;
+			}
+			
+			.dots-section.flip-dots::before {
+				transform: scaleX(-1);
+			}
+			
+			.dots-section.flip-dots-vertical::before {
+				transform: scaleY(-1);
+			}
+			
+			.dots-section.flip-dots-both::before {
+				transform: scaleX(-1) scaleY(-1);
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const dotsSections = document.querySelectorAll('.dots-section');
+				dotsSections.forEach(section => {
+					const imagePath = section.getAttribute('data-dots-image');
+					if (imagePath) {
+						section.style.setProperty('--dots-bg-image', `url('${imagePath}')`);
+					}
+					
+					const opacity = section.getAttribute('data-dots-opacity');
+					if (opacity !== null) {
+						section.style.setProperty('--dots-opacity', opacity);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<main style="padding-top: 0;">
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<div class="absolute inset-0 z-0">
+					<img src="/assets/bgimage6.webp" alt="Background" class="object-cover w-full h-full" />
+				</div>
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">LESSON 10</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">CALLED TO ONE KINGDOM</h1>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Teacher Preparation + Resources</h3>
+						<p class="text-white/90 leading-relaxed">
+							Review each element of this lesson in advance—especially the Scripture readings, discussion questions, and journal prompts. Spend time praying over your group, asking the Holy Spirit to help students see how their daily lives and future careers are part of God's Kingdom work.
+						</p>
+					</div>
+
+					<div class="flex flex-col md:flex-row gap-6 mb-6">
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/67e2dce27ceeeb883e04d153_Lesson%2010_Slides.pdf" target="_blank" rel="noopener noreferrer" class="bg-yellow-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Presentation</h3>
+								<p class="text-white/70 text-sm">Download Presentation</p>
+							</div>
+							<img src="/assets/presentation.svg" alt="Presentation" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/67e2dce25d646ba58f7450bd_Lesson%2010_Student.pdf" target="_blank" rel="noopener noreferrer" class="bg-green-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Student Guide</h3>
+								<p class="text-white/70 text-sm">Download Student Guide</p>
+							</div>
+							<img src="/assets/file-text.svg" alt="Student Guide" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://www.hopegallery.org/share/27D2487A-0C42-4D21-8FD0CF206F85C65E/" target="_blank" rel="noopener noreferrer" class="bg-blue-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-blue-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Download All</h3>
+								<p class="text-white/70 text-sm">Download All Lesson Files</p>
+							</div>
+							<img src="/assets/folder-down.svg" alt="Download All" class="w-8 h-8 text-yellow-200 flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Summary</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								This lesson invites students to reflect on their vocation, exploring how they can live out their calling in their daily lives and future careers. They will consider their calling to "show others the goodness of God" (1 Peter 2:9-12), connecting their various roles and work to seeking the Kingdom of God (Matthew 6:33). Students will discover that God's plans for their lives start now and that every part of their lives—at school, home or work—becomes meaningful within God's Kingdom.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Main Point</h3>
+							<p class="text-lg text-white font-regular leading-relaxed">
+								You are called, in your daily lives and future careers, to participate in God's Kingdom work on earth.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Objectives</h3>
+							<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+								<li>Students will discuss what it means to seek God's Kingdom in their daily lives and future careers.</li>
+								<li>Students will understand that they are called to participate in God's redemptive work.</li>
+							</ul>
+						</div>
+
+						<div>
+							<h3 class="text-2xl font-bold text-white mb-4">Teaching Tips</h3>
+							<div class="space-y-3 text-lg text-white/90 leading-relaxed">
+								<p>Challenge misconceptions about calling. Some students may believe that only "spiritual" jobs (like being a pastor or missionary) count as serving God. Others might think God's purpose for them is something that will happen in the future. This lesson helps them see that every job, relationship, and situation can be used to bring God's Kingdom into the world.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Materials Needed</h3>
+						<div class="flex flex-col md:flex-row gap-6">
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Extra papers, pens, or pencils</h4>
+								<img src="/assets/file-text.svg" alt="Paper" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Getting Started
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 2</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Welcome Discussion</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p class="text-white/60 italic">Start class by breaking students into small groups.</p>
+								<p class="text-white/60 italic">Invite them to discuss their reflections on Romans 12:4-8 from last week. Use these questions to kickstart the conversation:</p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>What did you learn as you prayed about how God has gifted you?</p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>Did you find new opportunities to use your gifts to serve your local church? If so, how?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 3</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Welcome Activity</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p class="text-white/60 italic">Have the entire class sit in a large circle facing one another.</p>
+								<p class="text-white/60 italic">Explain that the group will combine their creative minds to tell a story. Moving clockwise around the circle, each student will add one sentence to the narrative. Small details or big plot twists are all fair game.</p>
+								<p class="text-white/60 italic">Start the story with this introduction: "It was a cool day in the city." Work around the circle as long as time allows, or at least until everyone has had an opportunity to contribute.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 4</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Some of your additions to our story were subtle; others were major plot twists, but they all played an important part in where and how the story ended.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>When you step back and think about the story of the world, from when God first created it to this very moment, how do you see yourself? Do you live like the main character? Or do you find it difficult to see how anyone—especially you—could ever make a difference in such a grand story? Either way, you would be wrong.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Every moment of your life plays a part in the story of how God is redeeming the world. The choices you make, the skills you develop, and even the career you pursue are all opportunities for God to work in and through you. He uses our lives to restore the brokenness caused by sin.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Before we dive in, I want to hear from you.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 5</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Introduction</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong>Icebreaker Question:</strong></p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>What do you think it typically looks like for someone to contribute to God's story? How have you seen other believers make a meaningful impact in the world?</p>
+								<p class="text-white/60 italic">If they need help, share these examples:</p>
+								<ul class="list-disc list-inside space-y-2 ml-4 text-white/90">
+									<li>an entrepreneur who builds a business that benefits her community</li>
+									<li>a nurse who serves his patients with the compassion and gentleness of Jesus</li>
+									<li>a student who shares the Gospel with her friends at school</li>
+								</ul>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Some people assume that only pastors and missionaries are doing God's work, or that God's plan for them is in the future—when they are older. But that is not true. Every single day of your life is part of God's Kingdom work. Whether you're at school, home, work, or planning for the future, you have a role to play.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Digging In
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">30 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 6</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>In this passage, Peter is writing to a group of believers who are scattered and living as outsiders in their communities. As we read, consider how our identity as God's people shapes our purpose here and now.</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="peter-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 8</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What does this passage say about your identity and purpose?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 9</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What does the passage mean when it calls us "temporary residents and foreigners"?</p>
+								<p class="text-lg text-white/60 italic">Call on a few volunteers to share. Then, point out that before we follow Jesus, we are citizens of a sinful world, following its customs and serving its priorities. But when we choose to follow Jesus, our belonging changes. We become citizens of his eternal Kingdom, following his ways and serving his priorities.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 10</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">How can disciples "show others the goodness of God" through their daily lives and careers?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong>Optional Follow-Up Question:</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">Let's think about a job you might like to have one day. How might you show others the goodness of God as you do that job?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">This next passage is the conclusion of one of Jesus' teachings on how to show others God's goodness, regardless of our position or level of influence.</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="matthew-6-33-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 12</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What does Jesus say his disciples should do?</p>
+								<p class="text-lg text-white/60 italic">Answers include: Seek the Kingdom of God and live righteously.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 13</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What is the Kingdom of God?</p>
+								<p class="text-lg text-white/60 italic">Call on a few volunteers to share. Then, point out that when Jesus talked about God's Kingdom, he was referring to God's reign of peace and justice in the world. Through his death and resurrection, Jesus planted the seed of God's Kingdom. Since then, it has been growing and spreading its redemptive influence. We are called to participate in God's Kingdom as we live as redeemed people in this sinful world.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 14</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What does it mean to "seek the Kingdom of God above all else"?</p>
+								<p class="text-lg text-white/60 italic">Answers may include living the way Jesus did, inviting others into God's story, sharing God's love with our words and actions, etc.</p>
+								<p class="text-lg text-white/60 italic leading-relaxed">Emphasize that seeking the Kingdom above all else means focusing on and living for eternal things, rather than earthly things.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 15</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Apply</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/60 italic leading-relaxed">
+									Invite the students to gather in their small groups.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									We seek God's Kingdom by embodying his love, mercy, and justice. God uses us to bring his Kingdom to earth.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">Reflect on where God currently has you placed. How can you "seek God's Kingdom" and "show others God's goodness" in this season of your life?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">How can you seek God's Kingdom in the ways you plan for your future?</p>
+								<p class="text-lg text-white/60 italic">Bring the students back to the large group.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Practicing Life with Jesus
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 16</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Last week, we discussed how we can use our unique gifts to serve the church. This week, we will think bigger: How can we use our gifts to share Jesus with the world? God wants to bring his Kingdom to every place and person, and he invites you to be a part of it!</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>In your journal, list the people, places, and activities where you spend the most time each week. Think of your family, school, friends, after-school and weekend activities, job, neighborhood, etc.</p>
+								<p class="text-white/60 italic">Give students 1-2 minutes to make their list.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Jesus gave us a prayer we can pray daily to prepare us for joining in God's Kingdom work. It is called the Lord's Prayer. You may already know it.</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="matthew-6-9-13-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 18</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Response</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/60 italic leading-relaxed">
+									Transition into a time of individual response during which students will write a prayer using the Lord's Prayer.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong>Journal Prompt:</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Choose one of the places, activities, or people from your list. In your journal, write a prayer using the first two verses of the Lord's Prayer as your model. You can elaborate as much as you want.
+								</p>
+								<p class="text-lg text-white/60 italic">Choose an example from your own life to model the prayer for the students before they begin writing. Follow this format:</p>
+								<div class="bg-white/5 p-4 rounded-lg my-4">
+									<p class="text-white/90 leading-relaxed italic">
+										Father, may your holy name be known [in this place or by this person].<br />
+										May your Kingdom come, and your will be done [here or in this person's life].<br />
+										Help me to join you in the work you are doing.<br />
+										Amen.
+									</p>
+								</div>
+								<p class="text-lg text-white/60 italic leading-relaxed">
+									Encourage the students to practice saying this prayer every day this week. Note how they can even pray multiple times a day for different people and places.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Closing</h3>
+						<p class="text-lg text-white/60 italic leading-relaxed">
+							Encourage teens to keep engaging with God's Word on their own, using the tools they have learned about. Wrap up the class by praying over your students.
+						</p>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden"></section>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<a href="/curriculum.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Explore All Lessons</h3>
+								<p class="text-white/70 text-sm">View all 12 lessons</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Explore" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="/lessons/lesson-11.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Next Lesson</h3>
+								<p class="text-white/70 text-sm">Continue to Lesson 11</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Next" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+		<script type="module">
+			import { initLessonScriptureCard } from '/js/init-scripture-card.js';
+
+			document.addEventListener('DOMContentLoaded', () => {
+				initLessonScriptureCard({
+					lessonId: 'lesson-10-peter',
+					containerId: 'peter-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+
+				initLessonScriptureCard({
+					lessonId: 'lesson-10-matthew-6-33',
+					containerId: 'matthew-6-33-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+
+				initLessonScriptureCard({
+					lessonId: 'lesson-10-matthew-6-9-13',
+					containerId: 'matthew-6-9-13-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
+

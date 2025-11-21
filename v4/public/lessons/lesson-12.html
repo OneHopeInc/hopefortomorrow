@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Lesson 12: Called to One Lord</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: var(--dots-bg-image, url('/assets/dots.png'));
+				background-size: cover;
+				background-position: center;
+				opacity: var(--dots-opacity, 0.1);
+				z-index: 0;
+			}
+			
+			.dots-section.flip-dots::before {
+				transform: scaleX(-1);
+			}
+			
+			.dots-section.flip-dots-vertical::before {
+				transform: scaleY(-1);
+			}
+			
+			.dots-section.flip-dots-both::before {
+				transform: scaleX(-1) scaleY(-1);
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const dotsSections = document.querySelectorAll('.dots-section');
+				dotsSections.forEach(section => {
+					const imagePath = section.getAttribute('data-dots-image');
+					if (imagePath) {
+						section.style.setProperty('--dots-bg-image', `url('${imagePath}')`);
+					}
+					
+					const opacity = section.getAttribute('data-dots-opacity');
+					if (opacity !== null) {
+						section.style.setProperty('--dots-opacity', opacity);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<main style="padding-top: 0;">
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<div class="absolute inset-0 z-0">
+					<img src="/assets/bgimage6.webp" alt="Background" class="object-cover w-full h-full" />
+				</div>
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">LESSON 12</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">CALLED TO ONE LORD</h1>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Teacher Preparation + Resources</h3>
+						<p class="text-white/90 leading-relaxed">
+							Please review all lesson materials before teaching. Familiarize yourself with the Scripture passages, discussion questions, and activities. Take time to prepare your heart and pray for your students.
+						</p>
+					</div>
+
+					<div class="flex flex-col md:flex-row gap-6 mb-6">
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/67ee9405fd022b2b3bc15d76_Lesson%2012_Slides.pdf" target="_blank" rel="noopener noreferrer" class="bg-yellow-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Presentation</h3>
+								<p class="text-white/70 text-sm">Download Presentation</p>
+							</div>
+							<img src="/assets/presentation.svg" alt="Presentation" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/67ee9405418cda111adb1dd5_Lesson%2012_Student.pdf" target="_blank" rel="noopener noreferrer" class="bg-green-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Student Guide</h3>
+								<p class="text-white/70 text-sm">Download Student Guide</p>
+							</div>
+							<img src="/assets/file-text.svg" alt="Student Guide" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://www.hopegallery.org/share/919C8DF5-0DED-4887-AC608FB1412C89D3/" target="_blank" rel="noopener noreferrer" class="bg-blue-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-blue-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Download All</h3>
+								<p class="text-white/70 text-sm">Download All Lesson Files</p>
+							</div>
+							<img src="/assets/folder-down.svg" alt="Download All" class="w-8 h-8 text-yellow-200 flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6" data-dots-image="/assets/dots5.svg" data-dots-opacity="0.9">
+					</section>
+					
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Summary</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								This final lesson invites students to reflect on their discipleship journey over the past twelve weeks and consider how it will continue. Students will explore what it means to "remain in" Christ and recognize that their ability to live out their purpose depends on their connection to him. They will also revisit the spiritual practices they have learned throughout the program and develop a plan to integrate them into their daily routines.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Main Point</h3>
+							<p class="text-lg text-white font-regular leading-relaxed">
+								You are called to cultivate your relationship with Jesus daily.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Objectives</h3>
+							<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+								<li>Students will recognize that discipleship is a continuous process that is led by God.</li>
+								<li>Students will reflect on the spiritual disciplines discussed in the course and the impact of them in their lives.</li>
+							</ul>
+						</div>
+
+						<div>
+							<h3 class="text-2xl font-bold text-white mb-4">Teaching Tips</h3>
+							<div class="space-y-3 text-lg text-white/90 leading-relaxed">
+								<p>Change takes time and commitment. Encourage the students to continue in the journey of discipleship even after they fail. They can always begin again and rely on support from you, a church body, and God.</p>
+								<p>Acknowledge fears of imperfection when it comes to being and making disciples. Growth takes time and can often be a painful process, but being a disciple does not require perfection. Rather, it requires remaining in a relationship with Jesus. In this journey, we pursue Jesus, not perfection.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Materials Needed</h3>
+						<div class="flex flex-col md:flex-row gap-6">
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Whiteboard or large paper</h4>
+								<img src="/assets/file-text.svg" alt="Whiteboard" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Index cards/sticky notes, tape</h4>
+								<img src="/assets/file-text.svg" alt="Index cards" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Pens or pencils</h4>
+								<img src="/assets/pencil-line.svg" alt="Pens or pencils" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6">
+					</section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Getting Started
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 2</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Welcome Activity</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p class="text-white/60 italic">Draw a timeline on a whiteboard or long sheet of paper, labeling it from "Week One" to "Week Twelve."</p>
+								<p class="text-white/60 italic">Hand out a sticky note/index card with a small piece of tape to each student.</p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>Take out your journal and review your notes from the past twelve weeks. What moment, lesson, or discussion stands out to you?</p>
+								<p class="text-white/60 italic">Instruct the students to write down their responses and stick them on the timeline when they occurred.</p>
+								<p class="text-white/60 italic">Once everyone adds their reflections to the timeline, walk through it together. Read some of the responses aloud and invite the students to share more if they would like to.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 3</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Introduction</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>When we look at this timeline, we are reminded that discipleship is not a one-time occurrence. It is a journey, and that journey does not end today.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>These moments you have remembered are all seeds God has planted in your life. And, like any seed, these experiences will only take root if we continually cultivate an environment where they can thrive and grow.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Today, as we wrap up this program, we are going to discuss what it looks like to intentionally grow in our relationships with Jesus. After all, that is the ultimate goal of a disciple: to faithfully pursue the One we have chosen to follow.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Digging In
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">30 minutes</span>
+					</h2>
+					
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 4</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed">
+								In this section of Scripture, Jesus is teaching his followers what it truly means to be a disciple.
+							</p>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 5</p>
+						<div id="scripture-reading-container"></div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 7</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									How would you describe the different parts of the illustration Jesus is using?
+								</p>
+								<p class="text-white/60 italic">Answers should include the vine, the gardener, the branches, the fruit, pruning, and remaining.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 8</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Imagine a grapevine. What does a branch receive from the vine that allows fruit to grow?
+								</p>
+								<p class="text-white/60 italic">Answers should include water, nutrients, and support.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 9</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Why do gardeners prune plants? What does cutting off old branches do?
+								</p>
+								<p class="text-white/60 italic">Gardeners prune their plants when it has overgrown into a shape the gardener never intended or because a toxic branch is endangering the rest of the plant. Strategically cutting off branches allows the rest of the plant to gain more water and nutrients and stay healthy.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 10</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									What does the image of God as a gardener tell you about the way God works in your life?
+								</p>
+								<p class="text-white/60 italic mb-4">Highlight a few key characteristics of gardeners and ask the students how they help us to better understand how God works in our lives.</p>
+								<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+									<li>They give their plants daily attention and care.</li>
+									<li>They get their hands dirty.</li>
+									<li>Their goal is for the plant to flourish and bear fruit.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 11</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									What does it mean to "remain in" Jesus throughout your life?
+								</p>
+								<p class="text-white/60 italic">Answers may include staying in a close relationship with Jesus, relying on Jesus as your source of life and truth, etc.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 12</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									What does it mean that disciples "can do nothing" apart from Jesus?
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 13</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Apply</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/60 italic leading-relaxed">
+									Have students form pairs or small groups to discuss the following questions.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									At its core, discipleship is about living in relationship with Jesus—remaining in him, like a branch on a vine. God has incredible plans for your lives, but they can only be accomplished if you remain in Jesus and allow yourself to be pruned according to God's will. This is why, in the life of a disciple, cultivating your connection to Christ must always come first.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									How has your understanding of what it means to follow Jesus changed in the past twelve weeks?
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									What does the metaphor of pruning from John 15 tell us about the cost of being a disciple? What might God want to prune from your life?
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									How well do you do at remaining in Jesus on a daily basis? What helps you? What makes it difficult?
+								</p>
+								<p class="text-white/60 italic mt-4">
+									Bring students' attention back to the large group.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6">
+					</section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Practicing Life with Jesus
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+					
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 14</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Over the past twelve weeks, we have learned that following Jesus is so much more than a list of do's and don'ts. These practices—prayer, reading Scripture, serving others—are not just prescriptions for a healthy relationship with Jesus; they are ways we stay close to the One we love most. The goal is not to do more for Jesus, but to be with him. When we focus on being with him, everything we do naturally flows from that relationship.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>With this in mind, let's see how many practices we can remember that help us cultivate rich, lasting relationships with Jesus.</p>
+								<p class="text-white/60 italic">Invite students to share. Answers should include:</p>
+								<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4 mt-2">
+									<li>Prayer journaling</li>
+									<li>Praying Scripture</li>
+									<li>Reading God's Word following the Observe, Interpret, Apply steps</li>
+									<li>Going to and serving in church</li>
+									<li>Doing good in the world</li>
+									<li>Sharing Jesus with others</li>
+								</ul>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Some of these practices are things we can do every day, like reading the Scriptures, journaling, praying, and doing good in the world. Others are things we might do once a week, like attending and serving in the church.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 15</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Response</h3>
+							<p class="text-lg text-white/60 italic leading-relaxed mb-4">
+								Transition into a time of individual response.
+							</p>
+							<div>
+								<h4 class="text-xl font-bold text-white mb-3">Journal Prompt</h4>
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Take the next few minutes to respond in your journals using these prompts:
+								</p>
+								<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4 mb-4">
+									<li>What does your daily routine look like? Write down a schedule of your typical day, including what you do in the morning before school, how you spend your afternoons, and your routine before bed.</li>
+									<li>How can you reshape your daily routine to draw you closer to Jesus?</li>
+									<li>What is something in your current routine that you could cut back on to make more time for Jesus?</li>
+									<li>What is something new you could add to your day that helps you stay connected to God?</li>
+								</ul>
+								<p class="text-white/60 italic">If time allows, invite students to share their ideas for how they want to change their daily routines in order to foster a closer relationship with Jesus.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Closing</h3>
+						<p class="text-lg text-white/60 italic leading-relaxed">
+							End by praying a blessing over your students as they move forward in their discipleship journeys.
+						</p>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden"></section>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<a href="/curriculum.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Explore All Lessons</h3>
+								<p class="text-white/70 text-sm">View all 12 lessons</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Explore" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+		<script type="module">
+			import { initLessonScriptureCard } from '/js/init-scripture-card.js';
+
+			document.addEventListener('DOMContentLoaded', () => {
+				initLessonScriptureCard({
+					lessonId: 'lesson-12-john',
+					containerId: 'scripture-reading-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
+

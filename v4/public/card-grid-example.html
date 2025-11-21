@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Card Grid Example - Hope for Tomorrow</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.card-section {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+			}
+			
+			.card-section.fade-in-visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		</style>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<!-- Navigation Bar will be rendered here -->
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<!-- Main Content Area -->
+		<main style="padding-top: 0;">
+			<!-- Example Card Grid Section -->
+			<section class="py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<h2 class="text-3xl md:text-4xl font-bold mb-8 text-left text-white">Card Grid Component</h2>
+					<!-- Card Grid Container -->
+					<div id="card-grid-container"></div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module">
+			import { renderCardGrid, initCardGrid } from '/js/card-grid.js';
+			import { initCardFadeIn } from '/js/card-fade-in.js';
+			import { renderNavBar } from '/js/NavBar.js';
+
+			// Render navbar
+			const navbarContainer = document.getElementById('navbar-container');
+			const pathname = window.location.pathname;
+			navbarContainer.innerHTML = renderNavBar({ pathname });
+
+			// Initialize card grid with default 8 cards
+			initCardGrid('card-grid-container');
+			
+			// Initialize fade-in animations
+			initCardFadeIn();
+		</script>
+	</body>
+</html>

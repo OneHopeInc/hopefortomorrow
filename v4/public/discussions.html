@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: url('/assets/dots.png');
+				background-size: cover;
+				background-position: center;
+				opacity: 0.1;
+				z-index: 0;
+			}
+			
+			.card-section {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+			}
+			
+			.card-section.fade-in-visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		</style>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<!-- Navigation Bar will be rendered here -->
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<!-- Main Content Area -->
+		<main style="padding-top: 0;">
+			<!-- Banner Section -->
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<!-- Background Image -->
+				<div class="absolute inset-0 z-0">
+					<img
+						src="/assets/bgimage6.webp"
+						alt="Background"
+						class="object-cover w-full h-full"
+					/>
+				</div>
+				
+				<!-- Title and Subtitle Overlay -->
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+                    <p class="text-lg md:text-2xl font-regular text-white/90 uppercase">
+						HOPE FOR TOMORROW
+					</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">
+						BOOK OF HOPE DISCUSSIONS
+					</h1>
+				</div>
+			</section>
+
+			<!-- Content Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<!-- Introduction Card -->
+						<div class="bg-white/5 p-6 rounded-xl flex-1">
+							<h2 class="text-3xl font-bold mb-4 text-white">
+								Equip Your Teens with Hope for Tomorrow
+							</h2>
+							<p class="text-lg text-white/90 leading-relaxed">
+								The Hope For Tomorrow Book of Hope helps students navigate issues like mental health, gender identity, and social media through the lens of Scripture.
+							</p>
+						</div>
+
+						<!-- Resource Button Cards (Stacked) -->
+						<div class="flex flex-col gap-6 md:w-80">
+							<a href="https://www.hopegallery.org/l/6fcd098d744d482/" target="_blank" rel="noopener noreferrer" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4">
+								<div class="flex-1">
+									<h3 class="text-white text-xl font-bold mb-2">Book of Hope</h3>
+									<p class="text-white/70 text-sm">Download this book of Hope</p>
+								</div>
+								<img src="/assets/book-down.svg" alt="PDF" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</a>
+							<a href="https://www.hopegallery.org/l/a04321602b27aff/" target="_blank" rel="noopener noreferrer" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4">
+								<div class="flex-1">
+									<h3 class="text-white text-xl font-bold mb-2">Download Guides</h3>
+									<p class="text-white/70 text-sm">Get Discussion Guides Here</p>
+								</div>
+								<img src="/assets/folder-down.svg" alt="PDF" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- Dots Section Divider -->
+			<section class="dots-section relative w-full h-[20vh] bg-[#121212] overflow-hidden">
+			</section>
+
+			<!-- About Book Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+						<!-- Left Side: Image -->
+						<div class="flex-shrink-0">
+							<img 
+								src="./assets/bookofhope.jpg" 
+								alt="Hope for Tomorrow Book of Hope" 
+								class="w-full h-auto rounded-xl object-cover"
+							/>
+						</div>
+
+						<!-- Right Side: Information -->
+						<div class="flex flex-col gap-6">
+							<!-- First Card: What is the Book -->
+							<div class="bg-white/5 p-6 rounded-xl flex flex-col gap-4">
+								<h2 class="text-3xl font-bold text-white">
+									What is the Hope for Tomorrow Book of Hope?
+								</h2>
+								<p class="text-lg text-white/90 leading-relaxed">
+									The Hope For Tomorrow Book of Hope is designed specifically for teens, addressing their most pressing questions about identity, relationships, and purpose. Rooted in God's Word, it offers biblical truth and practical guidance on the challenges young people face today.
+								</p>
+							</div>
+
+							<!-- Second Card: 8-Week Journey -->
+							<div class="bg-white/5 p-6 rounded-xl flex flex-col gap-4">
+								<h3 class="text-3xl font-bold text-white">
+									An 8-Week Journey with Guided Conversations
+								</h3>
+								<p class="text-lg text-white/90 leading-relaxed">
+									The Hope For Tomorrow Book of Hope is structured as an 8-week program that can be used in schools, youth groups, or churches. Each week introduces a key theme teens are wrestling with today—paired with a leader's discussion guide to help you spark meaningful conversation and guide students back to Scripture.
+								</p>
+							</div>
+
+							<!-- View Book Button Card -->
+							<a href="https://www.hopegallery.org/l/6fcd098d744d482/" target="_blank" rel="noopener noreferrer" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-white/20 flex items-center justify-between gap-4">
+								<div class="flex-1">
+									<h3 class="text-white text-xl font-bold mb-2">View Book</h3>
+									<p class="text-white/70 text-sm">Explore the Hope for Tomorrow Book of Hope</p>
+								</div>
+								<img src="/assets/square-arrow-up-right.svg" alt="Book" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+            <!-- Dots Section Divider -->
+			<section class="dots-section relative w-full h-[20vh] bg-[#121212] overflow-hidden">
+			</section>
+
+			<!-- Card Grid Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-left text-white">Individual Discussion Guides</h2>
+					<div id="card-grid-container"></div>
+					
+					<!-- Discipleship Curriculum Section -->
+					<div class="flex flex-col md:flex-row gap-6 mt-8">
+						<!-- Explanation Card -->
+						<div class="bg-white/5 p-6 rounded-xl flex-1">
+							<p class="text-lg text-white/90 leading-relaxed">
+								If your students are already following Jesus and ready for a deeper journey, explore our 12-week discipleship curriculum designed to help them grow in faith and live it out
+							</p>
+						</div>
+
+						<!-- Discipleship Curriculum Button Card -->
+						<a href="/curriculum.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-white/20 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Discipleship Curriculum</h3>
+								<p class="text-white/70 text-sm">Learn More</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Discipleship Curriculum" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+
+            
+		</main>
+
+		<!-- Footer -->
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+	</body>
+</html>
+

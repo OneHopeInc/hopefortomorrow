@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Lesson 3: Living by Faith</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: var(--dots-bg-image, url('/assets/dots.png'));
+				background-size: cover;
+				background-position: center;
+				opacity: var(--dots-opacity, 0.1);
+				z-index: 0;
+			}
+			
+			.dots-section.flip-dots::before {
+				transform: scaleX(-1);
+			}
+			
+			.dots-section.flip-dots-vertical::before {
+				transform: scaleY(-1);
+			}
+			
+			.dots-section.flip-dots-both::before {
+				transform: scaleX(-1) scaleY(-1);
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const dotsSections = document.querySelectorAll('.dots-section');
+				dotsSections.forEach(section => {
+					const imagePath = section.getAttribute('data-dots-image');
+					if (imagePath) {
+						section.style.setProperty('--dots-bg-image', `url('${imagePath}')`);
+					}
+					
+					const opacity = section.getAttribute('data-dots-opacity');
+					if (opacity !== null) {
+						section.style.setProperty('--dots-opacity', opacity);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<main style="padding-top: 0;">
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<div class="absolute inset-0 z-0">
+					<img src="/assets/bgimage6.webp" alt="Background" class="object-cover w-full h-full" />
+				</div>
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">LESSON 3</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">LIVING BY FAITH</h1>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Teacher Preparation + Resources</h3>
+						<p class="text-white/90 leading-relaxed">
+							Review each element of this lesson in advance—especially the game instructions, Scripture readings, and discussion questions. Spend time praying over your group, asking the Holy Spirit to give you insight into the pressures they are carrying and to prepare your own heart to guide them toward Jesus.
+						</p>
+					</div>
+
+					<div class="flex flex-col md:flex-row gap-6 mb-6">
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/6798fd0a84436af6dd8982f0_Lesson%203_Slides.pdf" target="_blank" rel="noopener noreferrer" class="bg-yellow-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Presentation</h3>
+								<p class="text-white/70 text-sm">Download Presentation</p>
+							</div>
+							<img src="/assets/presentation.svg" alt="Presentation" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/6798fd0a320c07455868e127_Lesson%203_Student.pdf" target="_blank" rel="noopener noreferrer" class="bg-green-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Student Guide</h3>
+								<p class="text-white/70 text-sm">Download Student Guide</p>
+							</div>
+							<img src="/assets/file-text.svg" alt="Student Guide" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://www.hopegallery.org/share/1912A34B-000D-429F-8C26DC64B3E750AC/" target="_blank" rel="noopener noreferrer" class="bg-blue-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-blue-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Download All</h3>
+								<p class="text-white/70 text-sm">Download All Lesson Files</p>
+							</div>
+							<img src="/assets/folder-down.svg" alt="Download All" class="w-8 h-8 text-yellow-200 flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Summary</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								A disciple lives by faith in what Jesus accomplished on the cross, not by their own efforts. Students will explore how Jesus freed us from the weight of sin and gave us new life through his sacrifice. Using Romans 8:3 and Hebrews 12:1-3, they will reflect on their personal "weights" and how to let go of them to run their race with endurance. The practice of prayer journaling will encourage students to trust God with their future.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Main Point</h3>
+							<p class="text-lg text-white font-regular leading-relaxed">
+								A disciple lives by faith in what Jesus accomplished for them on the cross, not by their own wisdom or efforts.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Objectives</h3>
+							<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+								<li>Students will discuss what Jesus has accomplished for them on the cross.</li>
+								<li>With reference to Hebrews 12:1-3, students will compare the life of discipleship to a race and consider what weights they must strip off to run it well.</li>
+							</ul>
+						</div>
+
+						<div>
+							<h3 class="text-2xl font-bold text-white mb-4">Teaching Tips</h3>
+							<div class="space-y-3 text-lg text-white/90 leading-relaxed">
+								<p>According to recent research, 91% of teens in the Philippines reported feeling overwhelmed by pressures at school, and 42% reported experiencing anxiety in the past three months. Spend time praying that the content of today's conversation will speak to your students' heartfelt needs.</p>
+								<p>Be aware of your students. Find ways to engage their different learning styles throughout the lesson. Knowing each student's unique needs will help them feel safe and seen and make the lesson more personally meaningful.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Materials Needed</h3>
+						<div class="flex flex-col md:flex-row gap-6">
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Phone, clock, or timer</h4>
+								<img src="/assets/clock-2.svg" alt="Timer" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Extra papers & pens</h4>
+								<img src="/assets/file-text.svg" alt="Paper" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Bowls or baskets</h4>
+								<img src="/assets/folder-down.svg" alt="Basket" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Getting Started
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 2</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Welcome Activity</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p class="text-white/60 italic">For this game, every student needs three pieces of paper and a pen. Have students form groups of 4–6. Each group needs a basket or bowl. Consider offering a simple prize like a piece of candy to each group's winner.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>We are starting class today with some competition. Show of hands: Who here is competitive? We are going to play a game called Casting Your Cares. It is a race of sorts.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Everyone take out three pieces of paper. I will ask you three questions, and you will write one answer on each piece of paper. Do not write your name on the papers. Then, fold each paper into tiny squares, and we are going to have a race.</p>
+								<p class="text-white/60 italic">Ask the following questions and give students a few minutes to answer them:</p>
+								<ul class="list-disc list-inside space-y-2 ml-4">
+									<li>What is one thing in your life that stresses you out?</li>
+									<li>How do you cope when you are feeling overwhelmed?</li>
+									<li>What is something you fear about the future?</li>
+								</ul>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Now, with your papers folded, you will race the people in your group to throw all three papers into your basket. The first one to get all his or her papers into the basket wins. Set your baskets three to four steps away from your group. Ready? Set. Go!</p>
+								<p class="text-white/60 italic">At the end, congratulate the winners and have students return to their desks. Gather all the papers from the baskets.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slides 3–4</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Introduction</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p class="text-white/60 italic">Read several anonymous answers from the game aloud or ask volunteers to share their responses. The goal is to acknowledge the common pressures students are carrying.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Life is full of challenges. It can feel like competing in a race—only the finish line is unclear, and you are dragging around heavy weights. Things like school stress, parents' expectations, peer pressure, and just trying to figure out who you are and what you should do with your life—you are carrying a lot.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>These burdens can take control of our lives if we let them. But thankfully, Jesus made a way for us to live in freedom.</p>
+								<p class="text-white/60 italic">Optional: Share a short personal story about pressures you faced when you were their age. Use your testimony to introduce the concept of learning to live by faith in Jesus instead of by your own efforts.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Digging In
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">30 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 5</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed">
+								In today's Scriptures, we will see how Jesus came to free us from the weight of our sins so we can freely run the race of discipleship.
+							</p>
+						</div>
+					</div>
+
+					<div id="romans-8-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 7</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What is the law of Moses?</p>
+								<p class="text-lg text-white/60 italic">Call on a few volunteers to share. Explain that God gave the law to help the Israelites live in relationship with him, but they confused their relationship with their performance. We do the same thing when we try to earn approval, success, and salvation by our own strength.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">Why could the law not save us?</p>
+								<p class="text-lg text-white/60 italic">Answer: Because of the weakness of our sinful nature, we are not able to keep the law.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What did God do for us that we never could on our own?</p>
+								<p class="text-lg text-white/60 italic">Answer: He sent his Son to be a living sacrifice, ending sin's control over us.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 8</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">Why did God give the law to his people?</p>
+								<p class="text-lg text-white/60 italic">Call on a few volunteers to share. Point out that the law showed Israel how to live with God and display his character to the world. It freed them to live as God intended, but like us, they still chose sin.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">How did Jesus' sacrifice end sin's control over us?</p>
+								<p class="text-lg text-white/60 italic">Answers may include: Because he was sinless, he could die in our place; he carried the weight of our sins on the cross; we are forgiven.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									Jesus is both fully God and fully human. As a human, Jesus ran the race of life without sin. Then, he died in our place, taking the weight of our sins to the cross so we do not have to bear them. But he did not stay dead. When Jesus rose from the grave, he broke the power of death, so it is no longer our finish line. Now, when we live by trusting in Jesus, we are free from the control of sin and the fear of death.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 9</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed">
+								Jesus did not just free us from sin. He freed us for something: a purposeful life. In our next Scripture from Hebrews, the author writes about how we should live given what Jesus accomplished for us on the cross.
+							</p>
+						</div>
+					</div>
+
+					<div id="hebrews-12-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 11</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What does this passage tell us to do?</p>
+								<p class="text-lg text-white/60 italic">Answers may include: Strip off every weight and sin; run with endurance; keep your eyes on Jesus; remember what Jesus endured when you need encouragement.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 12</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">How is the life of discipleship like a race?</p>
+								<p class="text-lg text-white/60 italic">Follow-up questions: What is the finish line? What weights slow us down? Is it a marathon or a sprint? What does endurance look like?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 13</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Apply</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/60 italic leading-relaxed">
+									Have students turn to two or three classmates to discuss the following questions. After a few minutes, bring their attention back to you.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What are some weights in your life that feel especially heavy right now? How can you practically strip them off as you follow Jesus?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">When you feel anxious about the future, what can you do to keep your eyes on Jesus?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What is the difference between living by faith in what Jesus accomplished for you on the cross and living by faith in your own accomplishments?</p>
+								<p class="text-lg text-white/60 italic">Bring student attention back to the large group.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Practicing Life with Jesus
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 14</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>When running a race, sometimes it seems easier to run it alone than with someone else. That is because it can be tough to trust others, especially when we are unsure if they will come through for us. But when we run with Jesus, we can always be sure he will come through, even though his timing may look different from ours. One way we can practice living by faith is through prayer journaling.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Here is how it works: You write down what you are praying for and the date you prayed it. Later, when God answers, you write down how and when. Sometimes, his answers come quickly—like giving you peace during a big test. Other times, the answer takes longer, and we must keep trusting him. Prayer journaling helps us see God's faithfulness over time.</p>
+								<p class="text-white/60 italic">Optional: Share with your students an example of a prayer request you had and how God answered it. Choose an example that highlights how God's answers are sometimes unexpected and take time to unfold.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 15</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Response</h3>
+							<p class="text-lg text-white/60 italic leading-relaxed">
+								Transition into a time of individual response. Continue to encourage students to keep a journal for the duration of the program.
+							</p>
+							<div class="mt-4">
+								<h4 class="text-xl font-bold text-white mb-3">Journal Prompt</h4>
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Take out a notebook and a pen. Over the next few minutes, write your first prayer journal entry. Here are two prompts to help you get started:
+								</p>
+								<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+									<li>Can you remember times when God has answered your prayers or been faithful to you? Write those down and thank him.</li>
+									<li>What is a weight in your life you want God to take off your shoulders? How would life be different if God lifted that weight? Write to God about it and return to your journal entry when he answers your prayer.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Closing</h3>
+						<p class="text-lg text-white/60 italic leading-relaxed">
+							Encourage students to continue practicing prayer journaling throughout the next week. Wrap up the class by praying over your students.
+						</p>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden"></section>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<a href="/curriculum.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Explore All Lessons</h3>
+								<p class="text-white/70 text-sm">View all 12 lessons</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Explore" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="/lessons/lesson-4.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Next Lesson</h3>
+								<p class="text-white/70 text-sm">Continue to Lesson 4</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Next" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+		<script type="module">
+			import { initLessonScriptureCard } from '/js/init-scripture-card.js';
+
+			document.addEventListener('DOMContentLoaded', () => {
+				initLessonScriptureCard({
+					lessonId: 'lesson-3-romans',
+					containerId: 'romans-8-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+
+				initLessonScriptureCard({
+					lessonId: 'lesson-3-hebrews',
+					containerId: 'hebrews-12-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

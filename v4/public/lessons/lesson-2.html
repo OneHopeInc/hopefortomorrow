@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Lesson 2: Starting Again</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: var(--dots-bg-image, url('/assets/dots.png'));
+				background-size: cover;
+				background-position: center;
+				opacity: var(--dots-opacity, 0.1);
+				z-index: 0;
+			}
+			
+			.dots-section.flip-dots::before {
+				transform: scaleX(-1);
+			}
+			
+			.dots-section.flip-dots-vertical::before {
+				transform: scaleY(-1);
+			}
+			
+			.dots-section.flip-dots-both::before {
+				transform: scaleX(-1) scaleY(-1);
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const dotsSections = document.querySelectorAll('.dots-section');
+				dotsSections.forEach(section => {
+					const imagePath = section.getAttribute('data-dots-image');
+					if (imagePath) {
+						section.style.setProperty('--dots-bg-image', `url('${imagePath}')`);
+					}
+					
+					const opacity = section.getAttribute('data-dots-opacity');
+					if (opacity !== null) {
+						section.style.setProperty('--dots-opacity', opacity);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<main style="padding-top: 0;">
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<div class="absolute inset-0 z-0">
+					<img src="/assets/bgimage6.webp" alt="Background" class="object-cover w-full h-full" />
+				</div>
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">LESSON 2</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">STARTING AGAIN</h1>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Teacher Preparation + Resources</h3>
+						<p class="text-white/90 leading-relaxed">
+							Read Luke 15:11-24 and pray through the Upward-Inward-Outward framework before class. Reflect on the ways God has shown you mercy so you can lead your students with empathy. Review each activity, prep your materials, and invite the Holy Spirit to lead your conversations.
+						</p>
+					</div>
+
+					<div class="flex flex-col md:flex-row gap-6 mb-6">
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/6798fd01a1bd291aecab4eb4_Lesson%202_Slides.pdf" target="_blank" rel="noopener noreferrer" class="bg-yellow-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Presentation</h3>
+								<p class="text-white/70 text-sm">Download Presentation</p>
+							</div>
+							<img src="/assets/presentation.svg" alt="Presentation" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/6798fd01fd02a5d409821d83_Lesson%202_Student.pdf" target="_blank" rel="noopener noreferrer" class="bg-green-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Student Guide</h3>
+								<p class="text-white/70 text-sm">Download Student Guide</p>
+							</div>
+							<img src="/assets/file-text.svg" alt="Student Guide" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://www.hopegallery.org/share/1DA7A69B-5EF5-44FE-86F765F9D1ED1E82/" target="_blank" rel="noopener noreferrer" class="bg-blue-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-blue-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Download All</h3>
+								<p class="text-white/70 text-sm">Download All Lesson Files</p>
+							</div>
+							<img src="/assets/folder-down.svg" alt="Download All" class="w-8 h-8 text-yellow-200 flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6" data-dots-image="/assets/dots4.svg" data-dots-opacity="0.6"></section>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Summary</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								This lesson invites students to reflect on repentance and God’s mercy using Jesus’ parable of the lost son. Through guided activities and discussion, the class will examine preconceived beliefs about God’s character and compare them to the forgiving Father Jesus described. Students will practice posturing their hearts toward God by praying through the Upward-Inward-Outward framework.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Main Point</h3>
+							<p class="text-lg text-white font-regular leading-relaxed">
+								Jesus taught that God is a loving Father whose mercy welcomes us into a life of repentance.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Objectives</h3>
+							<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+								<li>Students will reflect on what Jesus’ parable of the lost son teaches about repentance and God’s mercy.</li>
+								<li>Students will compare their preconceived notions of God with the image of God Jesus presented in this parable.</li>
+							</ul>
+						</div>
+
+						<div>
+							<h3 class="text-2xl font-bold text-white mb-4">Teaching Tips</h3>
+							<div class="space-y-3 text-lg text-white/90 leading-relaxed">
+								<p>Continue fostering connections to create trust between yourself and your students so they feel comfortable engaging with authenticity and vulnerability.</p>
+								<p>When discussing heavier topics (such as the impact of sin), lead with empathy and humility—not condemnation. Your students will be affected by not just what you say but how you say it.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Materials Needed</h3>
+						<div class="flex flex-col md:flex-row gap-6">
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Phone, clock, or timer</h4>
+								<img src="/assets/clock-2.svg" alt="Timer" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Extra papers & pens</h4>
+								<img src="/assets/file-text.svg" alt="Paper" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Notecards</h4>
+								<img src="/assets/sticky-note.svg" alt="Notecards" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Getting Started
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 2</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Welcome Activity</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p class="text-white/60 italic">Before class, write a different role on each notecard (teacher, mayor, parent, etc.). On one notecard, write “God” and keep it for yourself. Make sure you have a timer ready.</p>
+								<p class="text-white/60 italic">Have students form small groups of 4–5 and distribute the cards.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>We are going to play a game called Who Am I? Each of you will receive a card with a role on it. No peeking! When it is your turn, hold your card on your forehead so your group can see it. Ask “yes/no” questions until you can guess the word on your card. Your turn lasts one minute—be fast!</p>
+								<p class="text-white/60 italic">Cycle through turns for five minutes, prompting students to switch after each minute. After the game, hold up the “God” card and lead rapid-fire “yes/no” questions such as: “Am I disappointed in you?”, “Am I merciful?”, “Am I distant?”, “Am I loving?” Highlight common misconceptions students hold or hear about God.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 3</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Introduction</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>People have all kinds of ideas about who God is and how he relates to us. Often, those ideas reflect our own experiences and expectations more than they reflect God’s true character.</p>
+								<p><strong>Icebreaker Question</strong></p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>How do you hear people talk about God, and what do you think that says about them? Consider what you notice on TV, on social media, from celebrities, and among your family and friends.</p>
+								<p class="text-white/60 italic">If students need help, share examples such as: judgmental people may imagine a judgmental God; someone with an absent father may imagine a distant God; someone who always gets their way may imagine a God who never asks anything of them.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Digging In
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">30 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 4</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed">
+								In Jesus’ time—like today—people had lots of ideas about who God is. The story we are about to read is one Jesus told to show God’s character and the relationship he longs to have with us.
+							</p>
+						</div>
+					</div>
+
+					<div id="scripture-reading-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 10</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What does the younger son do while he is in the distant land, and what happens to him?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">Reread the line the son practices before returning home. What does he assume about how his father will receive him?</p>
+								<p class="text-lg text-white/60 italic">Answers may include: He assumes he messed up too badly to be welcomed back as a son, so he plans to earn a place as a servant.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">How does the father respond when his son returns?</p>
+								<p class="text-lg text-white/60 italic">After students answer, explain that the father’s response would have shocked the original listeners because the son’s actions brought public shame, yet the father took that shame upon himself to welcome his child home.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slides 11–13</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									Parables use everyday situations to teach deeper truths. Through this parable, Jesus illustrates sin as a broken relationship and repentance as returning to that relationship.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What does this story teach us about repentance?</p>
+								<p class="text-lg text-white/60 italic">Answers may include: You do not have to earn God’s forgiveness; repentance is like walking away from bad choices toward your home in God’s family; repentance is being found after being lost.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									Being sinful involves turning our hearts away from God to chase our own desires. Repentance is turning those same hearts back toward God—over and over again. God does not call us to repent to keep us from good things. He wants to give us a life saturated with his love.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong>Optional Follow-Up Question</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">How do you see yourself (or others) chasing things that are not good for them?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									What does Jesus teach us about God and the kind of relationship he desires with us through this parable?
+								</p>
+								<p class="text-lg text-white/60 italic">Answers may include: God is compassionate, merciful, actively loving, patient, celebratory when we return, and eager to receive us as children.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 14</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Apply</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/60 italic leading-relaxed">
+									Have students form pairs for reflection. Remind them to keep confidentiality and listen respectfully.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">Now it is time to reflect on your own relationship with God. Turn to one person near you and discuss the following questions.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">How do you see yourself in the lost son’s story? In what ways have you turned your heart away from God, and how can you respond?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">How do feelings of shame and guilt impact your relationship with God and your walk with Jesus?</p>
+								<p class="text-lg text-white/60 italic">Bring the group back together to debrief.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Practicing Life with Jesus
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 15</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed">
+								God, our loving Father, wants daily relationship with us. Repentance is not only turning away from sin but also turning toward God over and over again. As we live this way, the Holy Spirit transforms us so we become more like Jesus.
+							</p>
+							<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed">
+								One way we orient ourselves toward God is through prayer. Today we will practice the Upward-Inward-Outward framework to guide our prayers.
+							</p>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 16</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong>Upward</strong>: Start your prayer by thanking God for who he is and what he has done. Use Luke 15 for inspiration, thanking him for his extravagant love and adoption.</p>
+								<p><strong>Inward</strong>: Look honestly at your own heart. Confess where you have turned away from God and ask for forgiveness. Ask God to help you forgive others, too.</p>
+								<p><strong>Outward</strong>: Pray for your needs and the needs of others. Ask God to guide you, help those around you, and use you to show his love to the world.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 17</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Response</h3>
+							<p class="text-lg text-white/60 italic leading-relaxed">
+								Transition into a time of individual response. Encourage students to keep a journal throughout the program.
+							</p>
+							<div class="mt-4">
+								<h4 class="text-xl font-bold text-white mb-3">Journal Prompt</h4>
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Take out a notebook and a pencil. Use the Upward-Inward-Outward tool to write a prayer in response to Jesus’ teaching. If you need guidance, use these prompts:
+								</p>
+								<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+									<li><strong>Upward:</strong> God, I thank you for being...</li>
+									<li><strong>Inward:</strong> I have sinned by... Please forgive me and help me turn back to you today.</li>
+									<li><strong>Outward:</strong> I pray that you help... (family, conflict, personal need). Bless us with your love and guide us toward a closer relationship with you.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Closing</h3>
+						<p class="text-lg text-white/60 italic leading-relaxed">
+							Encourage students to keep practicing Upward-Inward-Outward during the week. Close by praying over your students using the same framework.
+						</p>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden"></section>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<a href="/curriculum.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Explore All Lessons</h3>
+								<p class="text-white/70 text-sm">View all 12 lessons</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Explore" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="/lessons/lesson-3.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Next Lesson</h3>
+								<p class="text-white/70 text-sm">Continue to Lesson 3</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Next" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+		<script type="module">
+			import { initLessonScriptureCard } from '/js/init-scripture-card.js';
+
+			document.addEventListener('DOMContentLoaded', () => {
+				initLessonScriptureCard({
+					lessonId: 'lesson-2',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

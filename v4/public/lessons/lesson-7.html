@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Lesson 7: Made On Purpose</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: var(--dots-bg-image, url('/assets/dots.png'));
+				background-size: cover;
+				background-position: center;
+				opacity: var(--dots-opacity, 0.1);
+				z-index: 0;
+			}
+			
+			.dots-section.flip-dots::before {
+				transform: scaleX(-1);
+			}
+			
+			.dots-section.flip-dots-vertical::before {
+				transform: scaleY(-1);
+			}
+			
+			.dots-section.flip-dots-both::before {
+				transform: scaleX(-1) scaleY(-1);
+			}
+		</style>
+		<script>
+			// Set dots background images and opacity from data attributes
+			document.addEventListener('DOMContentLoaded', () => {
+				const dotsSections = document.querySelectorAll('.dots-section');
+				dotsSections.forEach(section => {
+					const imagePath = section.getAttribute('data-dots-image');
+					if (imagePath) {
+						section.style.setProperty('--dots-bg-image', `url('${imagePath}')`);
+					}
+					
+					const opacity = section.getAttribute('data-dots-opacity');
+					if (opacity !== null) {
+						section.style.setProperty('--dots-opacity', opacity);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<main style="padding-top: 0;">
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<div class="absolute inset-0 z-0">
+					<img src="/assets/bgimage6.webp" alt="Background" class="object-cover w-full h-full" />
+				</div>
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">LESSON 7</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">MADE ON PURPOSE</h1>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Teacher Preparation + Resources</h3>
+						<p class="text-white/90 leading-relaxed">
+							Review each element of this lesson in advance—especially the Mirror, Mirror game instructions, Scripture readings, and discussion questions. Spend time praying over your group, asking the Holy Spirit to give you discernment and gentleness as you guide them toward understanding their God-given identity with compassion and wisdom.
+						</p>
+					</div>
+
+					<div class="flex flex-col md:flex-row gap-6 mb-6">
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/67c87060b83976b035d65bf4_Lesson%207_Slides.pdf" target="_blank" rel="noopener noreferrer" class="bg-yellow-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Presentation</h3>
+								<p class="text-white/70 text-sm">Download Presentation</p>
+							</div>
+							<img src="/assets/presentation.svg" alt="Presentation" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/67c87060d9d28c90e0289ed6_Lesson%207_Student.pdf" target="_blank" rel="noopener noreferrer" class="bg-green-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Student Guide</h3>
+								<p class="text-white/70 text-sm">Download Student Guide</p>
+							</div>
+							<img src="/assets/file-text.svg" alt="Student Guide" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://www.hopegallery.org/share/92C038E6-94E0-4D89-95DF94B2786173A7/" target="_blank" rel="noopener noreferrer" class="bg-blue-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-blue-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Download All</h3>
+								<p class="text-white/70 text-sm">Download All Lesson Files</p>
+							</div>
+							<img src="/assets/folder-down.svg" alt="Download All" class="w-8 h-8 text-yellow-200 flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Summary</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								This lesson invites students to recognize and reflect on how God purposefully created them—including their gender—to uniquely reflect his goodness in the world. Students will explore how God's intentional design connects to the plans he has for them (Psalm 139), and they will consider the root cause of confusion around identity (Ephesians 4). The Practicing Life with Jesus section builds on the practice of personal Scripture reading by introducing the Apply step of the Observe-Interpret-Apply framework.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Main Point</h3>
+							<p class="text-lg text-white font-regular leading-relaxed">
+								God created you on purpose, and your gender is an intentional part of God's design and plan for you.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Objectives</h3>
+							<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+								<li>Students will recognize that they are created by God with purpose and to be wholly healthy.</li>
+								<li>Students will recognize the beauty and complexity of their own design.</li>
+							</ul>
+						</div>
+
+						<div>
+							<h3 class="text-2xl font-bold text-white mb-4">Teaching Tips</h3>
+							<div class="space-y-3 text-lg text-white/90 leading-relaxed">
+								<p>Body image and gender are very sensitive topics for people who struggle with them. Lead with gentleness and compassion.</p>
+								<p>Ensure the exploration of Ephesians 4 is not presented as a personal attack on students questioning their gender but instead offers hope and security that can only be found in their God-given identity.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Materials Needed</h3>
+						<div class="flex flex-col md:flex-row gap-6">
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Extra papers, pens, or pencils</h4>
+								<img src="/assets/file-text.svg" alt="Paper" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Phone, clock, or timer</h4>
+								<img src="/assets/clock-2.svg" alt="Timer" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Getting Started
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 2</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Welcome Activity</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p>This game is called Mirror, Mirror. To begin, break the students into groups of four to six. Explain that there will be two one-minute rounds:</p>
+								<p><strong>Round One:</strong> One student in each group will be the "Mover" while the rest are "Mirrors." The Mover will perform simple actions (e.g. waving, making silly faces, striking poses, etc.) while the Mirrors must imitate the Mover as closely as possible in real-time. Encourage the Movers to make the game as challenging as possible.</p>
+								<p><strong>Round Two:</strong> A second person from each group will become a Mover. The two Movers will perform their own actions, while the Mirrors must do their best to copy both Movers at the same time. If there is time, repeat Round Two with new Movers.</p>
+								<p class="text-white/60 italic">Once both rounds have been completed, gather the students back together.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 3</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Introduction</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Copying someone else's behaviors can be difficult. And as you probably noticed in our game, copying more than one person is pretty much impossible. This may explain why so many of us go through life feeling like bad imposters. We can feel this way when we try and fail to copy too many different influences. We are not designed to live like this.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Instead of hiding behind unconvincing performances of what we think our friends or families want or what society might accept, we can confidently embrace our God-given identity. This is what we are reflecting on today. But before we look at who God says we are in his Word, let's start with a question.</p>
+								<p><strong>Icebreaker Question</strong></p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>Why do you think we put so much effort into mirroring the identities of others in the first place?</p>
+								<p class="text-white/60 italic">Call on a few volunteers to share.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Online and around us, we are constantly flooded with images that remind us who we are not and who we should be—according to the world.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>But we do not have to mirror the images the world tries to force on us. In fact, God created us to be physical representatives of him—to mirror his beautiful, glorious image. And he created each one of us on purpose to reflect him in our own unique ways.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Digging In
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">30 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 4</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed">
+								When we struggle with identity, the world often offers a quick fix. It promises that by altering our appearance, our personality, or even our gender, we can finally "find ourselves." But this is a false hope that only leads to disappointment. True peace can only come from embracing who God made us to be.
+							</p>
+						</div>
+					</div>
+
+					<div id="psalm-139-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 6</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What does this passage tell us about how God created your body?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 7</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What does this passage tell us about God's plans for your life?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 8</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">How does the way God designed you relate to the purpose he has for your life?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">God's designs are perfect and purposeful. Everything about you, even the details that feel like mistakes, play a pivotal part in how you can uniquely mirror God's love and goodness into the world. Let's think specifically about gender for a moment.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 9</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong>Optional Follow-Up Question:</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">How does being a man or woman allow you to reflect God's character to others?</p>
+								<p class="text-lg text-white/60 italic">Provide a few examples:</p>
+								<ul class="list-disc list-inside space-y-2 ml-4 text-white/60 italic">
+									<li>"As a woman, I've found that I can connect with other women through our shared experiences."</li>
+									<li>"There are certain challenges and struggles that are unique to me as a man, and God has used them to reflect his character."</li>
+								</ul>
+								<p class="text-lg text-white/60 italic">Note: This question may cause some students to project and/or oppose gender stereotypes. If so, redirect the conversation. Reminds the students that God created gender, not gender stereotypes. Our calling as Christians is to conform to the way of Jesus, not to any cultural stereotypes.</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="ephesians-4-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 11</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed">
+									Take a moment to acknowledge how the language in the passage may be difficult for students to hear when reflecting on their struggles. Emphasize how sin causes all of us to question our identity in some way. But by living a life of daily surrender to Jesus, we can find security in who he says we are, and we can trust that God uses even our struggles to make us more like Jesus.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What does this passage tell us about why we may question our identity?</p>
+								<p class="text-lg text-white/60 italic">Answers may include: We turn away from God, who is our source of life and truth; we seek pleasure that leads us astray, etc.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">Do you remember the story of the Lost Son from Luke 15 that we read several weeks ago? The son was the beloved child of his father, and his home was in his father's house. That was his identity.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">But he believed a lie that there was something more and better for him outside his father's home. And that lie led him away from his father into desperate places. Instead of living as a beloved son and heir, he was living as a discarded servant in the pig pits.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">We do the same thing when we try to live apart from God. Our true identity is found in a relationship with our heavenly Father.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 12</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What role does the Spirit play in forming our identity in Christ?</p>
+								<p class="text-lg text-white/60 italic">Answers should include: The Holy Spirit renews our thoughts and attitudes.</p>
+								<p class="text-lg text-white/60 italic">Students may also refer to past lessons: The Holy Spirit transforms us, guides us in truth, helps us follow Jesus, etc.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 13</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What does it mean to "throw off your old sinful nature" and "put on your new nature, created to be like God"?</p>
+								<p class="text-lg text-white/60 italic">Call on a few volunteers to share.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">Our sinful nature is the combination of toxic habits and false beliefs that negatively influence our decisions. These things cloud our sense of identity so that instead of mirroring God's image to the world, we mirror a broken world back to itself.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">But because Jesus paid the penalty for our sins, we can become clean again. We can "put on our new nature, created to be like God." This is what it means to live as new creations in Christ, showing the world who he is through who we are.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 14</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Apply</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/60 italic leading-relaxed">
+									Have students turn to two or three classmates to discuss the following questions.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Let's focus again on body image and gender. In your journal, create two lists: one labeled "throw off" and one labeled "put on." With your group, write your answers to the following questions in each list.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What are some of the sinful habits, beliefs, and tendencies around body image and gender that we need to "throw off" as we follow Jesus?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What truths about your new nature as a child of God do you need to "put on"? (Make a list of truth statements and promises about your identity from Scripture.)</p>
+								<p class="text-lg text-white/60 italic">After a few minutes, bring students' attention back to the large group.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Practicing Life with Jesus
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 15</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>When we struggle with issues of identity, anxiety, or any other challenge in life, God's Word is a source of truth and wisdom that can guide you through these difficulties.</p>
+								<p class="text-white/60 italic">Optional for teacher: Share your testimony of how the Bible has encouraged you, especially as you have learned to walk in your God-given identity.</p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>How did reading God's Word on your own last week go? What did you learn? What questions do you have?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 16</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>As we study God's Word together, we have been using the Observe-Interpret-Apply technique to guide us in our growth. (Review the steps from the previous weeks (pray, read, observe, interpret).</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>The next step we will take today is to Apply: "What will I do with what I have read?" This step is critical. It ensures the knowledge that has made its way into our heads and our hearts also flows into the works of our hands. When you study Scripture, spend some time asking yourself:</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 17</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p>How does this passage challenge how I see God, myself, or the world around me?</p>
+								<p>What does God want me to do differently because of what I have read?</p>
+								<p class="text-white/60 italic">Encourage students to write these questions in a notebook or note-taking app on their phone.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>As a group, pray, read John 3:16-21, and review your observations and interpretations.</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="john-3-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 18</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Response</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								Divide the students into small groups to continue discussing the passage using the Apply questions they wrote down.
+							</p>
+							<p class="text-lg text-white/60 italic">Afterward, if time allows, invite a few groups to share.</p>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Closing</h3>
+						<p class="text-lg text-white/90 leading-relaxed">
+							Encourage students to use the steps they learned to read Scripture this week. Wrap up the class by praying over your students.
+						</p>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden"></section>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<a href="/curriculum.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Explore All Lessons</h3>
+								<p class="text-white/70 text-sm">View all 12 lessons</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Explore" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="/lessons/lesson-8.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Next Lesson</h3>
+								<p class="text-white/70 text-sm">Continue to Lesson 8</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Next" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+		<script type="module">
+			import { initLessonScriptureCard } from '/js/init-scripture-card.js';
+
+			document.addEventListener('DOMContentLoaded', () => {
+				initLessonScriptureCard({
+					lessonId: 'lesson-7-psalm',
+					containerId: 'psalm-139-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+
+				initLessonScriptureCard({
+					lessonId: 'lesson-7-ephesians',
+					containerId: 'ephesians-4-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+
+				initLessonScriptureCard({
+					lessonId: 'lesson-7-john',
+					containerId: 'john-3-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

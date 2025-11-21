@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Curriculum</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.card-section {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+			}
+			
+			.card-section.fade-in-visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: url('/assets/dots.png');
+				background-size: cover;
+				background-position: center;
+				opacity: 0.1;
+				z-index: 0;
+			}
+		</style>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<!-- Navigation Bar will be rendered here -->
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<!-- Main Content Area -->
+		<main style="padding-top: 0;">
+			<!-- Banner Section -->
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<!-- Background Image -->
+				<div class="absolute inset-0 z-0">
+					<img
+						src="/assets/bgimage6.webp"
+						alt="Background"
+						class="object-cover w-full h-full"
+					/>
+				</div>
+				
+				<!-- Title and Subtitle Overlay -->
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">
+						HOPE FOR TOMORROW
+					</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">
+						PROGRAM MATERIALS
+					</h1>
+				</div>
+			</section>
+
+			<!-- Content Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<!-- Introduction Card -->
+						<div class="bg-white/5 p-6 rounded-xl flex-1">
+							<h2 class="text-3xl font-bold mb-4 text-white">Introduction</h2>
+							<p class="text-lg text-white/90 leading-relaxed">
+								This 12-week program is designed to cultivate students' personal relationship with Jesus. Together, you will seek to learn from and become like Him as you apply God's Word to real-life issues and explore practices of prayer and Scripture reading. Each lesson includes Word and PDF versions of a teacher's guide, student guide, and presentation.
+							</p>
+						</div>
+
+						<!-- Getting Started Button Card -->
+						<a href="/gettingstarted.html" class="bg-yellow-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 md:w-[350px]">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Getting Started</h3>
+								<p class="text-white/70 text-sm">PROGRAM OVERVIEW</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Getting Started" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Dots Section Divider -->
+			<section class="dots-section relative w-full h-[20vh] bg-[#121212] overflow-hidden">
+			</section>
+
+			<!-- Curriculum Grid Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<!-- Curriculum Grid -->
+					<div id="curriculum-grid-container"></div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+	</body>
+</html>

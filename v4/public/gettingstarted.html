@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Getting Started</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: url('/assets/dots.png');
+				background-size: cover;
+				background-position: center;
+				opacity: 0.1;
+				z-index: 0;
+			}
+		</style>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<!-- Navigation Bar will be rendered here -->
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<!-- Main Content Area -->
+		<main style="padding-top: 0;">
+			<!-- Banner Section -->
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<!-- Background Image -->
+				<div class="absolute inset-0 z-0">
+					<img
+						src="/assets/bgimage6.webp"
+						alt="Background"
+						class="object-cover w-full h-full"
+					/>
+				</div>
+				
+				<!-- Title and Subtitle Overlay -->
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">
+						HOPE FOR TOMORROW
+					</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">
+						PROGRAM OVERVIEW
+					</h1>
+				</div>
+			</section>
+
+			<!-- Content Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<!-- Introduction Card -->
+					<div class="bg-white/5 p-6 rounded-xl flex flex-col gap-4">
+						<h2 class="text-3xl font-bold text-white">
+							Introduction
+						</h2>
+						<p class="text-lg text-white/90 leading-relaxed">
+							This 12-week program is designed to cultivate students' character development and faith journey as disciples of Jesus. Through discussion-centered lessons, students will explore Christian values and apply biblical teachings to real-life issues such as relationships, identity, mental health, and future goals. Each lesson integrates scripture, group activities, and practical applications to challenge students to grow in their faith, build positive relationships, and confidently pursue purpose-driven lives.
+						</p>
+						<div class="mt-4">
+							<h3 class="text-2xl font-bold text-white mb-4">Outcomes</h3>
+							<ol class="list-decimal list-inside space-y-2 text-lg text-white/90 leading-relaxed">
+								<li>Students will know that God's Word has wisdom that can help them navigate the challenges of their daily life.</li>
+								<li>Students will report growth in their personal relationship with Jesus through regular engagement with God's Word and the practice of spiritual disciplines.</li>
+								<li>Students will express a commitment to ongoing discipleship by becoming more involved in a local church and sharing faith with others.</li>
+							</ol>
+						</div>
+					</div>
+
+					<!-- Button Cards -->
+					<div class="flex flex-col md:flex-row gap-6 mt-6">
+						<!-- Start Lesson One Button Card -->
+						<a href="/lessons/lesson-1.html" class="bg-yellow-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Start Lesson One</h3>
+								<p class="text-white/70 text-sm">Begin with Follow Me</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Start" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<!-- Download Button Card -->
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/6781606222fe8bac7fbe48a1_Program%20Overview%201.pdf" target="_blank" rel="noopener noreferrer" class="bg-blue-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-blue-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Download</h3>
+								<p class="text-white/70 text-sm">Download Materials</p>
+							</div>
+							<img src="/assets/folder-down.svg" alt="Download" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Dots Section Divider -->
+			<section class="dots-section relative w-full h-[20vh] bg-[#121212] overflow-hidden">
+			</section>
+
+			<!-- Scope and Sequence Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="grid grid-cols-1 gap-6">
+						<!-- Unit 1 Card -->
+						<div class="bg-white/5 p-6 rounded-xl flex flex-col gap-4">
+							<h3 class="text-2xl font-bold text-yellow-200">Unit 1: Invitation to Discipleship</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								In Unit 1, you will invite your students to explore what it means (and does not mean) to follow Jesus. Key topics include how they can have a relationship with the Father through Jesus, sin and repentance, and living by faith rather than by their own strength.
+							</p>
+							<div class="mt-2 space-y-3">
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 1: Follow Me</h4>
+									<p class="text-yellow-200/70 italic">Jesus invites you on a lifelong journey of discipleship.</p>
+								</div>
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 2: Starting Again</h4>
+									<p class="text-yellow-200/70 italic">Jesus taught that God is a loving Father whose mercy welcomes us into a life of repentance.</p>
+								</div>
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 3: Living By Faith</h4>
+									<p class="text-yellow-200/70 italic">A disciple lives by faith in what Jesus accomplished for them on the cross, not by their own wisdom or efforts.</p>
+								</div>
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 4: Being, Not Doing</h4>
+									<p class="text-yellow-200/70 italic">Discipleship is not about what you do for Jesus, but it is about being with Jesus and listening to him.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Unit 2 Card -->
+						<div class="bg-white/5 p-6 rounded-xl flex flex-col gap-4">
+							<h3 class="text-2xl font-bold text-green-200">Unit 2: Identity of a Disciple</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								In Unit 2, you will cover the topics of relationships, mental health, gender, and social media through the lens of identity. You cannot say everything about these topics in one hour. Instead, the goal is to start them on a journey of discovery by pointing them in the right direction.
+							</p>
+							<div class="mt-2 space-y-3">
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 5: Made for Relationships</h4>
+									<p class="text-green-200/70 italic">God created you for right relationships with him and others, and your identity is formed by your relationships.</p>
+								</div>
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 6: Made to be Whole</h4>
+									<p class="text-green-200/70 italic">God created you to be complete and healthy in body, mind, and spirit.</p>
+								</div>
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 7: Made on Purpose</h4>
+									<p class="text-green-200/70 italic">God created you on purpose, and your gender is an intentional part of God's design and plan for you.</p>
+								</div>
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 8: Made to be Light</h4>
+									<p class="text-green-200/70 italic">God created you to be his light in the world, and the ways you engage with media can either magnify or dim your light.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Unit 3 Card -->
+						<div class="bg-white/5 p-6 rounded-xl flex flex-col gap-4">
+							<h3 class="text-2xl font-bold text-blue-200">Unit 3: Purpose of a Disciple</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								In Unit 3, you will encourage your students to embrace their God-given purpose. You will invite them to consider their unique place and role within the Church, God's purpose for their daily lives and future careers, their calling to continually seek God, and their mission to make disciples.
+							</p>
+							<div class="mt-2 space-y-3">
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 9: Called to One Body</h4>
+									<p class="text-blue-200/70 italic">You are called to use your unique gifts to serve the body of Christ.</p>
+								</div>
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 10: Called to One Kingdom</h4>
+									<p class="text-blue-200/70 italic">You are called, in your daily lives and future careers, to participate in God's kingdom work on earth.</p>
+								</div>
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 11: Called to One Lord</h4>
+									<p class="text-blue-200/70 italic">You are called to cultivate your relationship with Jesus every day.</p>
+								</div>
+								<div>
+									<h4 class="text-xl font-bold text-white mb-1">Lesson 12: Called to One Mission</h4>
+									<p class="text-blue-200/70 italic">You are called to make disciples of Jesus.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Dots Section Divider -->
+			<section class="dots-section relative w-full h-[20vh] bg-[#121212] overflow-hidden">
+			</section>
+
+			<!-- Bottom Button Cards Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<!-- Explore All Lessons Button Card -->
+						<a href="/curriculum.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Explore All Lessons</h3>
+								<p class="text-white/70 text-sm">View all 12 lessons</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Explore" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<!-- Start Lesson One Button Card -->
+						<a href="/lessons/lesson-1.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Start Lesson One</h3>
+								<p class="text-white/70 text-sm">Begin with Follow Me</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Start" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+	</body>
+</html>

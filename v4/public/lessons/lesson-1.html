@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Lesson 1: Follow Me</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: var(--dots-bg-image, url('/assets/dots.png'));
+				background-size: cover;
+				background-position: center;
+				opacity: var(--dots-opacity, 0.1);
+				z-index: 0;
+			}
+			
+			.dots-section.flip-dots::before {
+				transform: scaleX(-1);
+			}
+			
+			.dots-section.flip-dots-vertical::before {
+				transform: scaleY(-1);
+			}
+			
+			.dots-section.flip-dots-both::before {
+				transform: scaleX(-1) scaleY(-1);
+			}
+		</style>
+		<script>
+			// Set dots background images and opacity from data attributes
+			document.addEventListener('DOMContentLoaded', () => {
+				const dotsSections = document.querySelectorAll('.dots-section');
+				dotsSections.forEach(section => {
+					const imagePath = section.getAttribute('data-dots-image');
+					if (imagePath) {
+						section.style.setProperty('--dots-bg-image', `url('${imagePath}')`);
+					}
+					
+					const opacity = section.getAttribute('data-dots-opacity');
+					if (opacity !== null) {
+						section.style.setProperty('--dots-opacity', opacity);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<!-- Navigation Bar will be rendered here -->
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<!-- Main Content Area -->
+		<main style="padding-top: 0;">
+			<!-- Banner Section -->
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<!-- Background Image -->
+				<div class="absolute inset-0 z-0">
+					<img
+						src="/assets/bgimage6.webp"
+						alt="Background"
+						class="object-cover w-full h-full"
+					/>
+				</div>
+				
+				<!-- Title and Subtitle Overlay -->
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">
+						LESSON 1
+					</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">
+						FOLLOW ME
+					</h1>
+				</div>
+			</section>
+
+			<!-- Main Content Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					
+					<!-- Teacher Preparation Card - First Row -->
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Teacher Preparation + Resources</h3>
+						<p class="text-white/90 leading-relaxed">
+							Please review all lesson materials before teaching. Familiarize yourself with the Scripture passages, discussion questions, and activities. Take time to prepare your heart and pray for your students.
+						</p>
+					</div>
+
+					<!-- Action Buttons - Second Row -->
+					<div class="flex flex-col md:flex-row gap-6 mb-6">
+						<!-- Presentation Card -->
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/6798fc8917752d820a7f9140_Lesson%201_Slides%20(1).pdf" target="_blank" rel="noopener noreferrer" class="bg-yellow-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Presentation</h3>
+								<p class="text-white/70 text-sm">Download Presentation</p>
+							</div>
+							<img src="/assets/presentation.svg" alt="Presentation" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<!-- Student Guide Card -->
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/6798fcb9f70895006910876d_Lesson%201_Student.pdf" target="_blank" rel="noopener noreferrer" class="bg-green-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Student Guide</h3>
+								<p class="text-white/70 text-sm">Download Student Guide</p>
+							</div>
+							<img src="/assets/file-text.svg" alt="Student Guide" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<!-- Download All Card -->
+						<a href="https://www.hopegallery.org/share/BE62C52D-FC07-491B-93AD7DC5A20C494F/?viewType=grid" target="_blank" rel="noopener noreferrer" class="bg-blue-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-blue-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Download All</h3>
+								<p class="text-white/70 text-sm">Download All Lesson Files</p>
+							</div>
+							<img src="/assets/folder-down.svg" alt="Download All" class="w-8 h-8 text-yellow-200 flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+
+					<!-- Dots Section Divider -->
+					<!-- To use a specific dots image, add data-dots-image="/assets/dots2.svg" (or dots3.svg, dots4.svg, dots5.svg) -->
+					<!-- To adjust opacity, add data-dots-opacity="0.2" (default is 0.1) -->
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6" data-dots-image="/assets/dots5.svg" data-dots-opacity="0.9">
+					</section>
+							
+					<!-- Combined Lesson Overview Card -->
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<!-- Lesson Summary -->
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Summary</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								This lesson introduces students to the concept of discipleship by exploring the story of Simon Peter's call to follow Jesus. Through a guided discussion, students will reflect on what it means to follow Jesus and consider how this might look in their own lives. The lesson highlights that discipleship is not about having everything figured out but about growing in a relationship with God through knowing Jesus.
+							</p>
+						</div>
+
+						<!-- Main Point -->
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Main Point</h3>
+							<p class="text-lg text-white font-regular leading-relaxed">
+								Jesus invites you to join him on a lifelong journey of discipleship.
+							</p>
+						</div>
+
+						<!-- Lesson Objectives -->
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Objectives</h3>
+							<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+								<li>Students will discuss what it means when Jesus calls them to follow him.</li>
+								<li>Students will reflect on the impact of sin in their lives.</li>
+							</ul>
+						</div>
+
+						<!-- Teaching Tips -->
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Teaching Tips</h3>
+							<div class="space-y-3 text-lg text-white/90 leading-relaxed">
+								<p>Strive to be open and approachable. Remember that everyone's journey is unique, and it is okay if students are not ready to open up immediately. Be ready to embrace some awkward silence. Today is all about creating a space where they feel comfortable asking questions and exploring what following Jesus could mean for them.</p>
+								<p>Relax and keep the content engaging and interactive. Avoid lecturing the students. Pause for a moment between portions of the introduction. Add playfulness to the language and be expressive in your speech.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Materials Needed -->
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Materials Needed</h3>
+						<div class="flex flex-col md:flex-row gap-6">
+							<!-- Timer Card -->
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Phone, clock, or timer</h4>
+								<img src="/assets/clock-2.svg" alt="Timer" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<!-- Paper Card -->
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Paper</h4>
+								<img src="/assets/file-text.svg" alt="Paper" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+
+							<!-- Pen/Pencil Card -->
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Pen or pencil</h4>
+								<img src="/assets/pencil-line.svg" alt="Pen or pencil" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+						</div>
+					</div>
+
+					<!-- Dots Section Divider -->
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6">
+					</section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Getting Started
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">20 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 2</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Welcome Activity</h3>
+						<p class="text-lg text-white/60 italic leading-relaxed mb-4">
+							This game requires two lines of students facing each other. You will also need a phone, clock, or timer to keep track of time. If there is not enough room for two lines, divide students into four smaller lines with students facing each other.
+						</p>
+						<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+							<p><strong class="text-yellow-200">Say</strong></p>
+							<p>We are going to play a game called Quick Connections. First, I will give you a minute to think of a few interesting facts about yourself. These could be anything—your favorite hobbies, something you are passionate about, or a fun fact. <span class="text-white/60 italic">(Provide a few moments for students to think.)</span></p>
+						<p class="mt-4"><strong class="text-yellow-200">Say</strong></p>
+						<p>Now, we will split into two lines facing each other. The first line will stay in place, and the second line will shift one person over at the end of each round. The person at the end of the second line will move to the front of the line. Each round will last for one minute. During this time, share your interesting facts with each other. Make sure to ask follow-up questions. Now, let us get started!</p>
+							<p class="mt-4 text-lg text-white/60 italic leading-relaxed">At the end, have students return to their desks. Share a few interesting facts you learned from the students you chatted with and ask volunteers to do the same.</p>
+						</div>
+					</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 3</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Introduction</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>Have you ever been a follower of something or someone, such as a celebrity, a band, or an influential thinker/personality?</p>
+								<p class="text-white/60 italic">Call on a few volunteers to share.</p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>What do you think it means to follow Jesus?</p>
+								<p class="text-white/60 italic">Allow 1-2 minutes for students to respond. Capture key ideas from their responses on a whiteboard. (You will refer back to these answers at the end of these twelve weeks, so be sure to record them.)</p>
+								<p class="text-white/60 italic">Answers may include living a good life, having a relationship with God, following rules, going to church, reading the Bible, being judgmental, compassionate, etc.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Thank you for sharing! I hope you will keep sharing your honest thoughts and questions. They are an important part of the journey of discipleship.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 4</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed mb-3">
+								Raise your hand if "discipleship" is a new word for you. (Pause for a moment and raise your hand.) It comes from the word "disciple," which is another word for "student." The first followers of Jesus were called disciples. Discipleship is the lifelong journey of following Jesus in order to learn from and become like him.
+							</p>
+							<p class="text-lg text-white/90 leading-relaxed mb-3">
+								When Jesus calls us to be his disciples, he calls us to leave behind what we think we know and follow him instead. At the heart of this call is an invitation into a relationship with God. God sent his Son Jesus into the world so that we could know him. Following Jesus is about coming to know the God who already knows you perfectly and finding your true life and purpose in that relationship.
+							</p>
+							<p class="text-lg text-white/90 leading-relaxed"><strong>Optional:</strong></p>
+							<p class="text-lg text-white/60 italic leading-relaxed mt-2">
+								Teacher, share a brief story with your students about your own experience growing in a relationship with Jesus. This is an opportunity for you to be authentic and vulnerable—everything you want to encourage your students to be. If you need help, consider the following questions:
+							</p>
+							<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4 mt-2">
+								<li class="text-white/60 italic">At what point did you truly start following Jesus?</li>
+								<li class="text-white/60 italic">What has been a key moment of growth or challenge for you as you have followed Jesus?</li>
+								<li class="text-white/60 italic">What is something new you have been learning from Jesus recently?</li>
+							</ul>
+							<p class="text-lg text-white/60 italic leading-relaxed mt-3">
+								End your testimony by connecting it to today's Scripture discussion.
+							</p>
+						</div>
+					</div>
+
+					<!-- Dots Section Divider -->
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Digging In
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">30 minutes</span>
+					</h2>
+					
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 5</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+							<p class="text-lg text-white/90 leading-relaxed">
+								Today, we will read about Simon, who started out as a fisherman before he encountered Jesus. We will see what happened to him and how being called by Jesus changed his life.
+							</p>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 6</p>
+						<div id="scripture-reading-container"></div>
+					</div>
+
+						<div class="mb-6">
+							<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 9</p>
+							<div class="bg-white/5 p-6 rounded-xl">
+								<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									What stands out to you about this story?
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									What do you notice about how Jesus and Simon interact with each other?
+								</p>
+							</div>
+						</div>
+						</div>
+
+						<div class="mb-6">
+							<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 10</p>
+							<div class="bg-white/5 p-6 rounded-xl">
+								<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+								<div class="space-y-4">
+									<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+									<p class="text-lg text-white/90 leading-relaxed mb-4">
+										Simon Peter responded to the miracle by falling to his knees and saying, "Oh, Lord, please leave me—I'm such a sinful man." What do you think it means to be sinful? How do you observe people around you being sinful? How are you sinful toward others?
+									</p>
+									<p class="text-lg text-white/60 italic mb-4">
+										Students may respond by talking about sin in terms of bad behaviors. After receiving a few responses, take a moment to reframe their concept of sin in relational terms. This will set up next week's lesson.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="mb-6">
+							<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 11</p>
+							<div class="bg-white/5 p-6 rounded-xl">
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									One simple way to define sin is that it is anything we think, say, or do that goes against God. Being sinful is about more than bad behaviors. It is about the tendency of our hearts to turn away from the God who loves us and put our trust in things that cannot truly satisfy or fill our hearts. If discipleship is about growing in our relationship with God by following Jesus, then sin is what damages that relationship by leading us away from God.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed mt-4">
+									When Peter said he was a sinful man and told Jesus to leave him, he was recognizing the spiritual distance between himself and God. But what Peter did not yet realize is that God had sought him out. God was standing right in front of him! That realization would come as he got to know Jesus more.
+								</p>
+							</div>
+						</div>
+
+						<div class="mb-6">
+							<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 12</p>
+							<div class="bg-white/5 p-6 rounded-xl">
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									What does Jesus mean when he tells Simon, "From now on you'll be fishing for people!"?
+								</p>
+								<p class="text-lg text-white/60 italic">
+									Call on a few volunteers to share. Then, point out that Jesus gave Simon Peter a new purpose, which is just the start of Peter's story. Peter would spend the rest of his life growing into that purpose as he followed Jesus.
+								</p>
+							</div>
+						</div>
+
+						<div class="mb-6">
+							<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 13</p>
+							<div class="bg-white/5 p-6 rounded-xl">
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									What do you think it means that Simon and his coworkers "left everything and followed Jesus"?
+								</p>
+								<p class="text-lg text-white/60 italic mt-4">
+									Call on a few volunteers to share. Then, point out that these men not only left behind their homes and livelihoods. They also left behind their assumptions, wisdom, and their way of life in order to learn a new way from Jesus.
+								</p>
+							</div>
+						</div>
+
+						<div class="mb-6">
+							<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 14</p>
+							<div class="bg-white/5 p-6 rounded-xl">
+								<h3 class="text-2xl font-bold text-white mb-4">Apply</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/60 italic leading-relaxed">
+									Have students form pairs to discuss the following questions. Remind them to be open and respectful of each other's ideas. Walk around the room to monitor progress and take note of recurring thoughts.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									This story from Luke's Gospel records how Jesus called Peter to follow him. Now, I want you to reflect on how Jesus may be calling you to follow him. Turn to one person near you and discuss the following questions.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									What might you need to leave behind to follow Jesus more fully? (Consider beliefs, habits, relationships, desires, pressures, expectations, etc.)
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									Do you know what your purpose is? What would it look like for you to trust Jesus to give your life purpose?
+								</p>
+								<p class="text-lg text-white/60 italic mt-4">
+									(Bring students' attention back to the large group.)
+								</p>
+							</div>
+						</div>
+						</div>
+
+						<!-- Dots Section Divider -->
+						<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6">
+						</section>
+
+						<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+							Practicing Life with Jesus
+							<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+						</h2>
+						
+						<div class="mb-6">
+							<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 15</p>
+							<div class="bg-white/5 p-6 rounded-xl">
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-3">
+									Thank you all for your thoughtful responses. As we have been discussing this passage, something may have occurred to you: Peter <em>literally</em> followed Jesus. He walked and talked with Jesus face-to-face.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed mb-3">
+									Clearly, Jesus is not standing in front of us in the same way today. So, what does it mean to follow or have a relationship with Jesus today?
+								</p>
+								<p class="text-lg text-white/60 italic mb-3">(Provide a few moments for students to think.)</p>
+								<p class="text-lg text-white/90 leading-relaxed mb-3">
+									Jesus is no longer physically present the way he was to Peter, but he is actually with us in a much closer way. Jesus sends his Holy Spirit to live in his followers. The Holy Spirit is God who comes to make his home in us. The Holy Spirit transforms our hearts and draws us to Jesus, giving us the faith that leads to salvation.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									Through the Holy Spirit, Jesus is always present to his followers, guiding, teaching, and comforting us. This is good news because the journey of discipleship is not one we can accomplish on our own. Remember, it is about growing in our relationship with God. And the way any relationship grows is through communication.
+								</p>
+							</div>
+						</div>
+
+						<div class="mb-6">
+							<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 16</p>
+							<div class="bg-white/5 p-6 rounded-xl">
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									What do you think of when you hear the word "prayer"?
+								</p>
+								<p class="text-lg text-white/60 italic mb-4">(Call on a few volunteers to share.)</p>
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">
+									Prayer is simply talking to God and listening to him. Think of it like a conversation with a close friend—only this friend loves us unconditionally, is always there, and has the power to help us with anything we bring to him. Prayer is where we can be ourselves, sharing our thoughts, hopes, and worries openly with the God who loves us deeply and knows us completely.
+								</p>
+								<p class="text-lg text-white/60 italic mt-4">
+									Share a personal story about something you value about prayer to help students connect with the idea personally.
+								</p>
+							</div>
+						</div>
+
+						<div class="mb-6">
+							<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 17</p>
+							<div class="bg-white/5 p-6 rounded-xl">
+								<h3 class="text-2xl font-bold text-white mb-4">Response</h3>
+							<p class="text-lg text-white/60 italic leading-relaxed mb-4">
+								Transition into a time of individual response. Encourage students to keep a journal for the duration of the program.
+							</p>
+							<div>
+								<h4 class="text-xl font-bold text-white mb-3">Journal Prompt</h4>
+								<p class="text-lg text-white/90 leading-relaxed mb-3"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Take out a notebook and a pencil. Over the next few minutes, write a prayer in response to Jesus' invitation to follow him. If you are not sure what to write, you can use these prompts as a guide:
+								</p>
+								<p class="text-lg text-white/60 italic leading-relaxed mb-4">
+									Can you relate to Simon Peter's sense of being a sinful man or of being far away from God? Talk to God about the reasons you feel distant, and ask Jesus to bring you closer to him.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Use these verses from Psalm 25 to ask God to guide you as you follow Jesus:
+								</p>
+							</div>
+						</div>
+						</div>
+
+						<div id="psalm-25-container"></div>
+
+						<div class="mb-6">
+							<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 18</p>
+							<div class="bg-white/5 p-6 rounded-xl">
+								<h3 class="text-2xl font-bold text-white mb-4">Closing</h3>
+								<p class="text-lg text-white/90 leading-relaxed">
+									Pray for your students using your own words or a prayer based on Psalm 25.
+								</p>
+							</div>
+						</div>
+
+						<!-- Dots Section Divider -->
+						<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden">
+						</section>
+					</div>
+				</div>
+			</section>
+
+			<!-- Bottom Button Cards Section -->
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<!-- Explore All Lessons Button Card -->
+						<a href="/curriculum.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Explore All Lessons</h3>
+								<p class="text-white/70 text-sm">View all 12 lessons</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Explore" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<!-- Next Lesson Button Card -->
+						<a href="/lessons/lesson-2.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Next Lesson</h3>
+								<p class="text-white/70 text-sm">Continue to Lesson 2</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Next" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+		<script type="module">
+			import { initLessonScriptureCard } from '/js/init-scripture-card.js';
+
+			document.addEventListener('DOMContentLoaded', () => {
+				initLessonScriptureCard({
+					lessonId: 'lesson-1',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+
+				initLessonScriptureCard({
+					lessonId: 'lesson-1-psalm',
+					containerId: 'psalm-25-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
+

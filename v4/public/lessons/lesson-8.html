@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+		<title>Hope for Tomorrow - Lesson 8: Made to Be Light</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/tailwind-config.js"></script>
+		<style>
+			.dots-section::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: var(--dots-bg-image, url('/assets/dots.png'));
+				background-size: cover;
+				background-position: center;
+				opacity: var(--dots-opacity, 0.1);
+				z-index: 0;
+			}
+			
+			.dots-section.flip-dots::before {
+				transform: scaleX(-1);
+			}
+			
+			.dots-section.flip-dots-vertical::before {
+				transform: scaleY(-1);
+			}
+			
+			.dots-section.flip-dots-both::before {
+				transform: scaleX(-1) scaleY(-1);
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const dotsSections = document.querySelectorAll('.dots-section');
+				dotsSections.forEach(section => {
+					const imagePath = section.getAttribute('data-dots-image');
+					if (imagePath) {
+						section.style.setProperty('--dots-bg-image', `url('${imagePath}')`);
+					}
+					
+					const opacity = section.getAttribute('data-dots-opacity');
+					if (opacity !== null) {
+						section.style.setProperty('--dots-opacity', opacity);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body class="overflow-x-hidden bg-[#121212]">
+		<div id="navbar-container" style="position: relative; z-index: 1000; opacity: 1;"></div>
+
+		<main style="padding-top: 0;">
+			<section class="relative h-[35vh] w-full flex items-end pb-2 sm:pb-2 md:pb-2 lg:pb-8 px-6">
+				<div class="absolute inset-0 z-0">
+					<img src="/assets/bgimage6.webp" alt="Background" class="object-cover w-full h-full" />
+				</div>
+				<div class="relative z-10 flex flex-col text-left max-w-[1200px] mx-auto w-full">
+					<p class="text-lg md:text-2xl font-regular text-white/90 uppercase">LESSON 8</p>
+					<h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase">MADE TO BE LIGHT</h1>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Teacher Preparation + Resources</h3>
+						<p class="text-white/90 leading-relaxed">
+							Review each element of this lesson in advance—especially the Scripture readings, discussion questions, and recommended apps/resources. Spend time praying over your group, asking the Holy Spirit to help students evaluate their social media habits with wisdom and grace. Familiarize yourself with the recommended apps so you can guide students effectively.
+						</p>
+					</div>
+
+					<div class="flex flex-col md:flex-row gap-6 mb-6">
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/67c8707684abf5cfa209d6f6_Lesson%208_Slides.pdf" target="_blank" rel="noopener noreferrer" class="bg-yellow-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Presentation</h3>
+								<p class="text-white/70 text-sm">Download Presentation</p>
+							</div>
+							<img src="/assets/presentation.svg" alt="Presentation" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://cdn.prod.website-files.com/668d40104dcc4fd1cad0171b/67c870765410a3fdc4792b45_Lesson%208_Student.pdf" target="_blank" rel="noopener noreferrer" class="bg-green-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Student Guide</h3>
+								<p class="text-white/70 text-sm">Download Student Guide</p>
+							</div>
+							<img src="/assets/file-text.svg" alt="Student Guide" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="https://www.hopegallery.org/share/CAE91C4B-C3CC-4CA1-B9B0889A9CCC2CD7/" target="_blank" rel="noopener noreferrer" class="bg-blue-200/50 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-blue-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Download All</h3>
+								<p class="text-white/70 text-sm">Download All Lesson Files</p>
+							</div>
+							<img src="/assets/folder-down.svg" alt="Download All" class="w-8 h-8 text-yellow-200 flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Summary</h3>
+							<p class="text-lg text-white/90 leading-relaxed">
+								This lesson challenges students to think about how their social media habits align with their identity as followers of Jesus. By looking at Jesus' words in the Sermon on the Mount, students will explore what it means to be the light of the world and how they can engage with social media in a way that reflects their faith. The lesson also introduces helpful apps and resources that can strengthen their personal study of Scripture.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Main Point</h3>
+							<p class="text-lg text-white font-regular leading-relaxed">
+								God created you to be his light in the world, and the way you engage with media can either magnify or dim this light.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h3 class="text-2xl font-bold text-white mb-4">Lesson Objectives</h3>
+							<ul class="list-disc list-inside space-y-2 text-lg text-white/90 leading-relaxed ml-4">
+								<li>Students will consider how their social media habits impact them and how they reflect God's light in the world.</li>
+								<li>Students will identify one practical way they can use technology that strengthens their relationship with Jesus.</li>
+							</ul>
+						</div>
+
+						<div>
+							<h3 class="text-2xl font-bold text-white mb-4">Teaching Tips</h3>
+							<div class="space-y-3 text-lg text-white/90 leading-relaxed">
+								<p>Review the Digital Engagement and Impact section of the Global Youth Culture report to get a sense of how teens relate to media and how it impacts them.</p>
+								<p>Keep the conversation balanced. Instead of focusing on the negatives, guide students toward seeing how technology and social media can be tools for good when used wisely.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Materials Needed</h3>
+						<div class="flex flex-col md:flex-row gap-6">
+							<div class="bg-white/5 p-6 rounded-xl flex items-center justify-between gap-4 flex-1">
+								<h4 class="text-white text-xl font-bold">Extra papers, pens, or pencils</h4>
+								<img src="/assets/file-text.svg" alt="Paper" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Getting Started
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 2</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Welcome Discussion</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p class="text-white/60 italic">Have students form small groups. Ask them to reflect on their practice of reading Scripture over the past week.</p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>What differences have you noticed in how you read Scripture since you started following the Observe-Interpret-Apply steps?</p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>How has God been speaking to you as you read his Word?</p>
+								<p class="text-white/60 italic">After five minutes, bring everyone back together and ask volunteers to share highlights from their group discussions.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 3</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row md:items-center gap-3">Introduction</h3>
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Learning to recognize and listen to God's voice is one of the most important parts of following Jesus. But as you may have noticed, this does not happen instantly. It takes time, practice, and a willingness to tune out distractions.</p>
+								<p><strong>Icebreaker Questions</strong></p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>Why do you think learning to hear from God can be so difficult?</p>
+								<p class="text-white/60 italic">Answers may include: not knowing what to listen for, distractions, fear of what God might say, etc.</p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>What are the loudest voices in your life, and how do they influence you?</p>
+								<p class="text-white/60 italic">Answers may include: social media influencers, family, friends, music and media, etc.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>There are more voices competing for our attention than we probably realize. But the loudest voice shaping your generation today is social media. Even if you don't use it much, it still impacts the world around you, including everything from trends and memes to the way people interact with each other.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Since social media is not going anywhere, how should we engage with it as followers of Jesus? We know it has negative impacts. It can create pressure to compare, lead to temptation, and even become addictive. But it also has positive impacts. It connects people, spreads messages, and can be a tool for sharing the gospel.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>So, today, we are going to discuss the wisdom God gives us to use social media in a way that shines the light of the gospel without distracting us from our relationships with Jesus.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Digging In
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">30 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 4</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Jesus spent much of his time teaching people about a new way of life—one that looks different from the rest of the world. The verses we are reading today come from his most famous teaching: the Sermon on the Mount. It took place on a hillside where hundreds of people gathered to gain wisdom from Jesus.</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Before we read, take a moment to close your eyes. Take a deep breath. Imagine sitting among the huddled crowds. Jesus' words were not just for his audience on that ancient hillside. They have wisdom for us today, too.</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="matthew-5-container"></div>
+
+					<div id="matthew-6-container"></div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 9</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Observe</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What does Jesus teach about the world and who his disciples are called to be?</p>
+								<p class="text-lg text-white/60 italic">Call on a few volunteers to share. Then, point out how we live in a world darkened by sin and its effects (e.g. sickness, poverty, injustice, etc.). But Jesus is the light of the world, and he calls his disciples to shine his light for all to see. This includes how we speak and act, including on social media.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong>Optional Follow-Up Question:</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">How can you use your presence online to shine the light of Jesus?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 10</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">Where does Jesus say we should store our treasures, and why?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 11</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Interpret</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What are some examples of earthly treasures? Think of things you see commonly on social media.</p>
+								<p class="text-lg text-white/60 italic">Answers may include: wealth, beauty, popularity, designer clothes and shoes, etc.</p>
+								<p class="text-lg text-white/90 leading-relaxed">Point out that Jesus is not just talking about money here. Many of the things we treasure most—like status, validation, or approval—show up in how we use social media. We do not just want things; we want the feeling that comes with them.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 12</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">What does Jesus mean when he says, "Wherever your treasure is, there the desires of your heart will also be"?</p>
+								<p class="text-lg text-white/60 italic">Call on a few volunteers to share. Then, explain how Jesus is warning his followers that the things we choose to value take over our hearts, shaping our priorities, choices, and the people we become.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong>Optional Follow-Up Question:</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What danger do you see in treasuring things like the attention and approval we can find on social media? How might that affect your relationship with Jesus?</p>
+								<p class="text-lg text-white/60 italic">Encourage students to reflect on their motives for using social media. Are they driven by the desire to please themselves, to please people, or to please God?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 13</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">In Matthew 6:22-23, Jesus uses a metaphor. What does Jesus mean when he says, "When your eye is healthy, your whole body is filled with light. But when your eye is unhealthy, your whole body is filled with darkness."</p>
+								<p class="text-lg text-white/90 leading-relaxed">Explain that the things we view and interact with impact us mentally, emotionally, and spiritually. Emphasize the importance of guarding ourselves from influences that may dim the light Jesus has placed within us.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong>Optional Follow-Up Question:</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">How do you feel after scrolling through social media for a long time?</p>
+								<p class="text-lg text-white/60 italic">Negative answers may include: lonely, angry, anxious, insecure, addicted, etc.</p>
+								<p class="text-lg text-white/60 italic">Positive answers may include: connected, creative, entertained, inspired, informed, etc.</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">Social media can be a great space for connection. But we need to be aware of its shadow side. Recent research found that young people who spent more time online report struggling more with their mental health—they experience higher levels of loneliness, depression, and anxiety. (Global Youth Culture)</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">If your feed is making you feel anxious or insecure, it might be time to rethink who you are following, what you are consuming, and how much time you spend online. It is important to reflect on the voices you allow to speak into your life.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 14</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Apply</h3>
+							<div class="space-y-4">
+								<p class="text-lg text-white/90 leading-relaxed">
+									Have students turn to two or three classmates to discuss the following questions.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Say</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">
+									Whether social media is good or bad for us depends on the posture of our hearts. If our eyes and hearts are set on God, then we can engage with social media in healthy, fun, creative ways for the good of ourselves, others, and for the glory of God.
+								</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">How do you use social media? What are your current habits?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed mb-4">How are your habits around social media helping or hurting you as you follow Jesus?</p>
+								<p class="text-lg text-white/90 leading-relaxed"><strong class="text-yellow-200">Ask</strong></p>
+								<p class="text-lg text-white/90 leading-relaxed">What is one step you can take this week to shine the light of Jesus online?</p>
+								<p class="text-lg text-white/60 italic">After a few minutes, bring students' attention back to the large group.</p>
+							</div>
+						</div>
+					</div>
+
+					<section class="dots-section flip-dots relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden mb-6"></section>
+
+					<h2 class="text-3xl font-bold mb-6 text-white flex flex-col md:flex-row md:items-center gap-3">
+						Practicing Life with Jesus
+						<span class="bg-yellow-200/20 text-yellow-200 px-3 py-1 rounded-full text-sm font-semibold w-fit">15 minutes</span>
+					</h2>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 15</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>We have been learning about the importance of reading God's Word on our own as we follow Jesus.</p>
+								<p class="text-white/60 italic">Review steps from previous weeks (pray, read, observe, interpret, apply, pray).</p>
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>Social media and technology, in general, can help us on our journey of reading and understanding God's Word. From apps to help us build better prayer habits to online teachers who can help us unpack Scripture, there are so many online resources that encourage and help us as we follow Jesus.</p>
+								<p><strong class="text-yellow-200">Ask</strong></p>
+								<p>Does anyone have any online resources they have found useful on your journey of faith?</p>
+								<p class="text-white/60 italic">Take responses. Recognize that students may need help discerning between good and bad online resources and teachers.</p>
+								<p class="text-white/60 italic">Share your own recommendations: What online teachers, apps, or resources do you recommend to help students grow in their faith?</p>
+								<p class="text-white/60 italic">Recommendations can include: The BibleProject and the Lectio 365 prayer app.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 16</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+								<p><strong class="text-yellow-200">Say</strong></p>
+								<p>One resource that is especially helpful is called the YouVersion Bible App.</p>
+								<p class="text-white/60 italic">Encourage your students to download and explore it as you talk about it.</p>
+								<p class="text-white/60 italic">Share different ways your students can use YouVersion: read Scripture, access Bible plans that provide devotionals, review the Verse of the Day, etc.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-6">
+						<p class="text-white/70 text-xs font-semibold uppercase tracking-[0.3em] py-2 my-4 pl-1">Slide 17</p>
+						<div class="bg-white/5 p-6 rounded-xl">
+							<h3 class="text-2xl font-bold text-white mb-4">Response</h3>
+							<p class="text-lg text-white/60 italic leading-relaxed">
+								Break the students into groups of two or three. Ask them to explore the resources you have mentioned.
+							</p>
+							<p class="text-lg text-white/60 italic leading-relaxed">
+								Encourage them to consider how they could start using some of these tools.
+							</p>
+							<p class="text-lg text-white/60 italic">End the small group time by inviting a few students to report back what they discovered.</p>
+						</div>
+					</div>
+
+					<div class="bg-white/5 p-6 rounded-xl mb-6">
+						<h3 class="text-2xl font-bold text-white mb-4">Closing</h3>
+						<p class="text-lg text-white/60 italic leading-relaxed">
+							Encourage teens to keep engaging with God's Word on their own, using the tools they have learned about today. Wrap up the class by praying over your students.
+						</p>
+					</div>
+
+					<section class="dots-section relative w-full h-[5vh] md:h-[10vh] bg-[#121212] overflow-hidden"></section>
+				</div>
+			</section>
+
+			<section class="w-full py-12 px-6 md:px-12 bg-[#121212]">
+				<div class="max-w-[1200px] mx-auto">
+					<div class="flex flex-col md:flex-row gap-6">
+						<a href="/curriculum.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-yellow-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Explore All Lessons</h3>
+								<p class="text-white/70 text-sm">View all 12 lessons</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Explore" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+
+						<a href="/lessons/lesson-9.html" class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors cursor-pointer border-2 border-transparent hover:border-green-200/50 flex items-center justify-between gap-4 flex-1">
+							<div class="flex-1">
+								<h3 class="text-white text-xl font-bold mb-2">Next Lesson</h3>
+								<p class="text-white/70 text-sm">Continue to Lesson 9</p>
+							</div>
+							<img src="/assets/square-arrow-right.svg" alt="Next" class="w-8 h-8 text-white flex-shrink-0" style="filter: brightness(0) invert(1);" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="py-8 px-6 md:px-12 bg-[#121212]">
+			<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+				<img src="/assets/OneHope Logo White-01 (1).png" alt="OneHope Logo" class="h-8" />
+				<p class="text-white/60 text-xs">© 2025 OneHope. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script type="module" src="/js/main.js"></script>
+		<script type="module">
+			import { initLessonScriptureCard } from '/js/init-scripture-card.js';
+
+			document.addEventListener('DOMContentLoaded', () => {
+				initLessonScriptureCard({
+					lessonId: 'lesson-8-matthew-5',
+					containerId: 'matthew-5-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+
+				initLessonScriptureCard({
+					lessonId: 'lesson-8-matthew-6',
+					containerId: 'matthew-6-container',
+					revealOptions: {
+						start: 'top center',
+						end: 'center center',
+						markers: false
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
+
